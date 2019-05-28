@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3DC29D631F93E72B00A3F390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC29D621F93E72B00A3F390 /* AppDelegate.swift */; };
+		3DC29D651F93E72B00A3F390 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC29D641F93E72B00A3F390 /* ViewController.swift */; };
+		3DC29D681F93E72B00A3F390 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC29D661F93E72B00A3F390 /* Main.storyboard */; };
+		3DC29D6A1F93E72B00A3F390 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DC29D691F93E72B00A3F390 /* Assets.xcassets */; };
+		3DC29D6D1F93E72B00A3F390 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC29D6B1F93E72B00A3F390 /* LaunchScreen.storyboard */; };
+		3DCCB1E42118D25500C6783E /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCB1E32118D25500C6783E /* InfoView.swift */; };
+		3DDB4B0820017A5C008BE64F /* Scramblers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDB4B0720017A5C008BE64F /* Scramblers.swift */; };
+		3DDB4B0A20017B80008BE64F /* Wiring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDB4B0920017B80008BE64F /* Wiring.swift */; };
+		50761C5DD40618D98D984E76 /* Pods_EnigmaI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C651FB21CDCBFA09FAC2A0A4 /* Pods_EnigmaI.framework */; };
+		FA98DA7F1FED208400B7C533 /* Enigma.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98DA7E1FED208400B7C533 /* Enigma.swift */; };
+		FAEA4C582000E24600CE7899 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA4C572000E24600CE7899 /* PickerView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		10AD715DC46A1A3C9F091375 /* Pods-EnigmaI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnigmaI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EnigmaI/Pods-EnigmaI.debug.xcconfig"; sourceTree = "<group>"; };
+		3DC29D5F1F93E72A00A3F390 /* EnigmaI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnigmaI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DC29D621F93E72B00A3F390 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3DC29D641F93E72B00A3F390 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3DC29D671F93E72B00A3F390 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3DC29D691F93E72B00A3F390 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3DC29D6C1F93E72B00A3F390 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3DC29D6E1F93E72B00A3F390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DCCB1E32118D25500C6783E /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		3DDB4B0720017A5C008BE64F /* Scramblers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scramblers.swift; sourceTree = "<group>"; };
+		3DDB4B0920017B80008BE64F /* Wiring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wiring.swift; sourceTree = "<group>"; };
+		C651FB21CDCBFA09FAC2A0A4 /* Pods_EnigmaI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnigmaI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D369F9EBA0E5D075467F4653 /* Pods-EnigmaI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnigmaI.release.xcconfig"; path = "Pods/Target Support Files/Pods-EnigmaI/Pods-EnigmaI.release.xcconfig"; sourceTree = "<group>"; };
+		FA43240B1FD5AB2E00F7D1A2 /* EnigmaI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EnigmaI.entitlements; sourceTree = "<group>"; };
+		FA98DA7E1FED208400B7C533 /* Enigma.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enigma.swift; sourceTree = "<group>"; };
+		FAEA4C572000E24600CE7899 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3DC29D5C1F93E72A00A3F390 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50761C5DD40618D98D984E76 /* Pods_EnigmaI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E416DEA6BF4ED06B2FF2C50 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				10AD715DC46A1A3C9F091375 /* Pods-EnigmaI.debug.xcconfig */,
+				D369F9EBA0E5D075467F4653 /* Pods-EnigmaI.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3D2CB8472049E0F700606070 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C651FB21CDCBFA09FAC2A0A4 /* Pods_EnigmaI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3DC29D561F93E72A00A3F390 = {
+			isa = PBXGroup;
+			children = (
+				3DC29D611F93E72A00A3F390 /* EnigmaI */,
+				3DC29D601F93E72A00A3F390 /* Products */,
+				3D2CB8472049E0F700606070 /* Frameworks */,
+				0E416DEA6BF4ED06B2FF2C50 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		3DC29D601F93E72A00A3F390 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DC29D5F1F93E72A00A3F390 /* EnigmaI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3DC29D611F93E72A00A3F390 /* EnigmaI */ = {
+			isa = PBXGroup;
+			children = (
+				3DC29D621F93E72B00A3F390 /* AppDelegate.swift */,
+				3DCCB1E32118D25500C6783E /* InfoView.swift */,
+				FA43240B1FD5AB2E00F7D1A2 /* EnigmaI.entitlements */,
+				FA98DA7E1FED208400B7C533 /* Enigma.swift */,
+				FAEA4C572000E24600CE7899 /* PickerView.swift */,
+				3DDB4B0720017A5C008BE64F /* Scramblers.swift */,
+				3DC29D641F93E72B00A3F390 /* ViewController.swift */,
+				3DDB4B0920017B80008BE64F /* Wiring.swift */,
+				3DC29D661F93E72B00A3F390 /* Main.storyboard */,
+				3DC29D691F93E72B00A3F390 /* Assets.xcassets */,
+				3DC29D6B1F93E72B00A3F390 /* LaunchScreen.storyboard */,
+				3DC29D6E1F93E72B00A3F390 /* Info.plist */,
+			);
+			path = EnigmaI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3DC29D5E1F93E72A00A3F390 /* EnigmaI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DC29D711F93E72B00A3F390 /* Build configuration list for PBXNativeTarget "EnigmaI" */;
+			buildPhases = (
+				B92C8621077CBA2EA9B4126D /* [CP] Check Pods Manifest.lock */,
+				3DC29D5B1F93E72A00A3F390 /* Sources */,
+				3DC29D5C1F93E72A00A3F390 /* Frameworks */,
+				3DC29D5D1F93E72A00A3F390 /* Resources */,
+				BB4A9C35C7E0927B48164B16 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EnigmaI;
+			productName = EnigmaI;
+			productReference = 3DC29D5F1F93E72A00A3F390 /* EnigmaI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3DC29D571F93E72A00A3F390 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Alex Schaller";
+				TargetAttributes = {
+					3DC29D5E1F93E72A00A3F390 = {
+						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1020;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 3DC29D5A1F93E72A00A3F390 /* Build configuration list for PBXProject "EnigmaI" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3DC29D561F93E72A00A3F390;
+			productRefGroup = 3DC29D601F93E72A00A3F390 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3DC29D5E1F93E72A00A3F390 /* EnigmaI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3DC29D5D1F93E72A00A3F390 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DC29D6D1F93E72B00A3F390 /* LaunchScreen.storyboard in Resources */,
+				3DC29D6A1F93E72B00A3F390 /* Assets.xcassets in Resources */,
+				3DC29D681F93E72B00A3F390 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B92C8621077CBA2EA9B4126D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EnigmaI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB4A9C35C7E0927B48164B16 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EnigmaI/Pods-EnigmaI-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EnigmaI/Pods-EnigmaI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3DC29D5B1F93E72A00A3F390 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAEA4C582000E24600CE7899 /* PickerView.swift in Sources */,
+				3DDB4B0A20017B80008BE64F /* Wiring.swift in Sources */,
+				3DC29D651F93E72B00A3F390 /* ViewController.swift in Sources */,
+				3DC29D631F93E72B00A3F390 /* AppDelegate.swift in Sources */,
+				3DDB4B0820017A5C008BE64F /* Scramblers.swift in Sources */,
+				3DCCB1E42118D25500C6783E /* InfoView.swift in Sources */,
+				FA98DA7F1FED208400B7C533 /* Enigma.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3DC29D661F93E72B00A3F390 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DC29D671F93E72B00A3F390 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3DC29D6B1F93E72B00A3F390 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DC29D6C1F93E72B00A3F390 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3DC29D6F1F93E72B00A3F390 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3DC29D701F93E72B00A3F390 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3DC29D721F93E72B00A3F390 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10AD715DC46A1A3C9F091375 /* Pods-EnigmaI.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J937E46LEP;
+				INFOPLIST_FILE = EnigmaI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-354645634.EnigmaI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		3DC29D731F93E72B00A3F390 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D369F9EBA0E5D075467F4653 /* Pods-EnigmaI.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J937E46LEP;
+				INFOPLIST_FILE = EnigmaI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-354645634.EnigmaI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3DC29D5A1F93E72A00A3F390 /* Build configuration list for PBXProject "EnigmaI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DC29D6F1F93E72B00A3F390 /* Debug */,
+				3DC29D701F93E72B00A3F390 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DC29D711F93E72B00A3F390 /* Build configuration list for PBXNativeTarget "EnigmaI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DC29D721F93E72B00A3F390 /* Debug */,
+				3DC29D731F93E72B00A3F390 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3DC29D571F93E72A00A3F390 /* Project object */;
+}

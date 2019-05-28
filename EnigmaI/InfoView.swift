@@ -26,7 +26,7 @@ class InfoView: UIViewController {
         infolabel2page1.text = "This stack of buttons lets you pick the settings of the individual Scramblers. First you select the visible letter (the one you can see through the little window), and in the second stack you select the ring position"
         
         infolabel3page1.text = "In the Plugboard you select different word pairs that you want to switch out with eachother therefore if you select the pair AP all As become Ps and vice versa. Then all you have to do is type out the word pairs in sequence."
-        infolabel4page1.text = "To encrypt a message you select all your settings, then you type your message in the input box and tap done. Your message will appear above."
+        infolabel4page1.text = "To encrypt a message you select all your settings, then you type your message in the input box and tap done. Your encrypted message will appear above."
         
         infolabel5page1.text = "To decrypt a message that you got, you first need to know the initial settings that the other person used, and enter them. Next, you type out the encrypted message and tap done, the message appears above."
         

@@ -17,13 +17,14 @@ struct global {
     
 }
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextViewDelegate {
 
     
     //IBOutlet Variables
     @IBOutlet weak var PlugboardInput: UITextField!
     @IBOutlet weak var InputText: UITextField!
     @IBOutlet weak var OutputText: UITextField!
+    @IBOutlet weak var OutputTextView: UITextView!
     
     @IBOutlet weak var Scrambler1Place: UIButton!
     @IBOutlet weak var Scrambler2Place: UIButton!
@@ -80,14 +81,12 @@ class ViewController: UIViewController {
         
         //Set up Output Text Field
         // TODO: Replace textfield with text view and make it look like it should with shrinking text size, etc.
-        OutputText.delegate = self
-        OutputText.inputView = UIView()
+        OutputTextView.isEditable = false
+        
         
         //Set properties for the navigation bar buttons
         refreshButton!.setBackgroundImage(UIImage(named: "Refresh Button"), for: .normal, barMetrics: .default)
         refreshButton!.setBackgroundImage(UIImage(named: "Refresh Button Pressed"), for: .selected, barMetrics: .default)
-        
-        helpButton!.setBackgroundImage(UIImage(named: "Help Button Background"), for: .normal, barMetrics: .default)
         
         // Giving all the stackviews a background color with rounded corners through the extension
         scramblersStackView.addBackground(color: darkGrayBackgroundColor, cornerRadius: 25.0)
@@ -197,7 +196,7 @@ class ViewController: UIViewController {
         let SP:[Character] = [Character(global.select[3] as! String), Character(global.select[4] as! String), Character(global.select[5] as! String)]
         let RP:[Int] = [(global.select[6] as! NSString).integerValue , (global.select[7] as! NSString).integerValue, (global.select[8] as! NSString).integerValue]
         
-        OutputText.text = Enigma(input, PlugboardInput.text!, SL ,SP, RP)
+        OutputTextView.text = Enigma(input, PlugboardInput.text!, SL ,SP, RP)
         
         InputText.resignFirstResponder()
         
@@ -266,7 +265,7 @@ class ViewController: UIViewController {
         global.select = ["I", "II", "III", "A", "B", "C", "1" , "1", "1"]
         PlugboardInput.text = ""
         InputText.text = ""
-        OutputText.text = ""
+        OutputTextView.text = ""
         
         viewWillAppear(false)
     }
@@ -291,7 +290,7 @@ class ViewController: UIViewController {
 extension ViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        return textField != self.OutputText
+        return textField != self.OutputTextView
     }
     
 }

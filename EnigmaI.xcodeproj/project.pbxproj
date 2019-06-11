@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D30C7C822B02AED00053152 /* ScramblerWiringData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D30C7C722B02AED00053152 /* ScramblerWiringData.json */; };
+		3D30C7CA22B03F9B00053152 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D30C7C922B03F9B00053152 /* Extensions.swift */; };
 		3DC29D631F93E72B00A3F390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC29D621F93E72B00A3F390 /* AppDelegate.swift */; };
 		3DC29D651F93E72B00A3F390 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC29D641F93E72B00A3F390 /* ViewController.swift */; };
 		3DC29D681F93E72B00A3F390 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC29D661F93E72B00A3F390 /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		10AD715DC46A1A3C9F091375 /* Pods-EnigmaI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnigmaI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EnigmaI/Pods-EnigmaI.debug.xcconfig"; sourceTree = "<group>"; };
+		3D30C7C722B02AED00053152 /* ScramblerWiringData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ScramblerWiringData.json; sourceTree = "<group>"; };
+		3D30C7C922B03F9B00053152 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = ../Extensions.swift; sourceTree = "<group>"; };
 		3DC29D5F1F93E72A00A3F390 /* EnigmaI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnigmaI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC29D621F93E72B00A3F390 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DC29D641F93E72B00A3F390 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +72,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3D30C7CC22B0415900053152 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3D30C7C722B02AED00053152 /* ScramblerWiringData.json */,
+				3D30C7C922B03F9B00053152 /* Extensions.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3D30C7CD22B0420100053152 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3DDB4B0920017B80008BE64F /* Wiring.swift */,
+				3DDB4B0720017A5C008BE64F /* Scramblers.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3D30C7CE22B0547C00053152 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3DCCB1E32118D25500C6783E /* InfoView.swift */,
+				3DC29D641F93E72B00A3F390 /* ViewController.swift */,
+				FAEA4C572000E24600CE7899 /* PickerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		3DC29D561F93E72A00A3F390 = {
 			isa = PBXGroup;
 			children = (
@@ -89,17 +121,15 @@
 		3DC29D611F93E72A00A3F390 /* EnigmaI */ = {
 			isa = PBXGroup;
 			children = (
+				3D30C7CE22B0547C00053152 /* Views */,
 				3DC29D621F93E72B00A3F390 /* AppDelegate.swift */,
-				3DCCB1E32118D25500C6783E /* InfoView.swift */,
-				FA43240B1FD5AB2E00F7D1A2 /* EnigmaI.entitlements */,
 				FA98DA7E1FED208400B7C533 /* Enigma.swift */,
-				FAEA4C572000E24600CE7899 /* PickerView.swift */,
-				3DDB4B0720017A5C008BE64F /* Scramblers.swift */,
-				3DC29D641F93E72B00A3F390 /* ViewController.swift */,
-				3DDB4B0920017B80008BE64F /* Wiring.swift */,
+				3D30C7CD22B0420100053152 /* Models */,
+				3D30C7CC22B0415900053152 /* Resources */,
 				3DC29D661F93E72B00A3F390 /* Main.storyboard */,
-				3DC29D691F93E72B00A3F390 /* Assets.xcassets */,
 				3DC29D6B1F93E72B00A3F390 /* LaunchScreen.storyboard */,
+				FA43240B1FD5AB2E00F7D1A2 /* EnigmaI.entitlements */,
+				3DC29D691F93E72B00A3F390 /* Assets.xcassets */,
 				3DC29D6E1F93E72B00A3F390 /* Info.plist */,
 			);
 			path = EnigmaI;
@@ -173,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DC29D6D1F93E72B00A3F390 /* LaunchScreen.storyboard in Resources */,
+				3D30C7C822B02AED00053152 /* ScramblerWiringData.json in Resources */,
 				3DC29D6A1F93E72B00A3F390 /* Assets.xcassets in Resources */,
 				3DC29D681F93E72B00A3F390 /* Main.storyboard in Resources */,
 			);
@@ -226,6 +257,7 @@
 				FAEA4C582000E24600CE7899 /* PickerView.swift in Sources */,
 				3DDB4B0A20017B80008BE64F /* Wiring.swift in Sources */,
 				3DC29D651F93E72B00A3F390 /* ViewController.swift in Sources */,
+				3D30C7CA22B03F9B00053152 /* Extensions.swift in Sources */,
 				3DC29D631F93E72B00A3F390 /* AppDelegate.swift in Sources */,
 				3DDB4B0820017A5C008BE64F /* Scramblers.swift in Sources */,
 				3DCCB1E42118D25500C6783E /* InfoView.swift in Sources */,

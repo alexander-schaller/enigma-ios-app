@@ -8,149 +8,107 @@
 
 import Foundation
 
-// MARK: Adons
-
-extension String {
-    
-    //
-    subscript (i: Int) -> Character {
-        return self[index(startIndex, offsetBy: i)]
-    }
-    
-    
-    // Indexing
-    subscript (i: Int) -> String {
-        return String(self[i] as Character)
-    }
-}
-
-
-
-extension Collection {
-    public func chunk(n: Int) -> [SubSequence] {
-        var res: [SubSequence] = []
-        var i = startIndex
-        var j: Index
-        while i != endIndex {
-            j = index(i, offsetBy: n, limitedBy: endIndex) ?? endIndex
-            res.append(self[i..<j])
-            i = j
-        }
-        return res
-    }
-}
-
-func AddTrailingSpace(of str: String) -> String {
+// Adds a trailing space after 2 characters
+func addTrailingSpace(of str: String) -> String {
     return str.chunk(n: 2)
         .map{ String($0) }.joined(separator: " ")
 }
 
+// Lets you use the += operation for dictionaries
 func += <K, V> (left: inout [K:V], right: [K:V]) {
     for (k, v) in right {
         left[k] = v
     }
 }
 
+// Modulo operation function for "true" modulo operation
 func mod(_ a: Int, _ n: Int) -> Int {
     precondition(n > 0, "modulus must be positive")
     let r = a % n
     return r >= 0 ? r : r + n
 }
 
-// MARK: Main Function
-
-func Enigma(_ Input:String, _ Plugboard:String, _ SL:[String]?, _ SP:[Character]?, _ RP:[Int]?) -> String {
-    let ScramblerNum : [String:Int] = ["I":0,"II":1,"III":2,"IV":3,"V":4]
+// MARK: Main Enigma Function
+func Enigma(_ input:String, _ plugboard:String, _ scramblerNumber:[String], _ scramblerState:[Character]?, _ ringPosition:[Int]?) -> String {
     
-    var SL1 : Int?
-    var SL2 : Int?
-    var SL3 : Int?
+    // Initalizing all the variables for the function
+    let scramblerNumberInLocation: [Int] = [scramblerNumber[0].roman, scramblerNumber[1].roman, scramblerNumber[2].roman]
     
-    var SP1 : Int?
-    var SP2 : Int?
-    var SP3 : Int?
+    let scramblerStateInLocation: [Int] = [scramblerState![0].formattedAsciiValue(), scramblerState![1].formattedAsciiValue(), scramblerState![2].formattedAsciiValue()]
     
-    SL1 = ScramblerNum[SL![0]]
-    SL2 = ScramblerNum[SL![1]]
-    SL3 = ScramblerNum[SL![2]]
-        
-    SP1 = ASCII[SP![0]]
-    SP2 = ASCII[SP![1]]
-    SP3 = ASCII[SP![2]]
+    let Scramblers: [Scrambler] = [Scrambler(scramblerNumberInLocation[0], scramblerStateInLocation[0], ringPosition![0]), Scrambler(scramblerNumberInLocation[1], scramblerStateInLocation[1], ringPosition![1]), Scrambler(scramblerNumberInLocation[2], scramblerStateInLocation[2], ringPosition![2])]
     
-    let S1 = Scrambler(Scramblers[SL1!], TON[SL1!], SP1!, RP![0])
-    let S2 = Scrambler(Scramblers[SL2!], TON[SL2!], SP2!, RP![1])
-    let S3 = Scrambler(Scramblers[SL3!], TON[SL3!], SP3!, RP![2])
+    let plugboard = plugboard.replacingOccurrences(of: " ", with: "")
+    var plugboardDictionary : [Character:Character] = [:]
+    var reversedPlugboardDictionary : [Character:Character] = [:]
     
-    var pb:String = Plugboard
-    pb = pb.replacingOccurrences(of: " ", with: "")
-    var PB : [Character:Character] = [:]
-    var BP : [Character:Character] = [:]
-    
+    // Takes all the pairs in the plugboards and turns them into a dictionary
     var counter = 0
-    var sto:Character = "A"
-    for i in pb {
+    var plugboardValue:Character = "A"
+    for i in plugboard {
         if counter % 2 != 0 {
-            PB[sto] = i
+            plugboardDictionary[plugboardValue] = i
         }
         else {
-            sto = i
+            plugboardValue = i
         }
         counter += 1
     }
     
-    for (Key, Value) in PB {
-        BP[Value] = Key
+    // Creating a reversed version of the plugboard dictionary in so that each letter can also be found backwards
+    for (Key, Value) in plugboardDictionary {
+        reversedPlugboardDictionary[Value] = Key
     }
     
-    PB += BP
+    // Joining the two dictionaries together
+    plugboardDictionary += reversedPlugboardDictionary
     
-    var x : Bool? = false ; var y : Bool? = false ; var z : Bool? = false
+    var turnOverNotchStatus: [Bool?] = [false, false, false]
         
-    if S3.State == ASCII[S3.TurnOverNotch] {
-        x = true
+    if Scramblers[2].state == Scramblers[2].turnOverNotch.formattedAsciiValue() {
+        turnOverNotchStatus[0] = true
     }
-    if S2.State == ASCII[S2.TurnOverNotch] {
-        y = true
+    if Scramblers[1].state == Scramblers[1].turnOverNotch.formattedAsciiValue() {
+        turnOverNotchStatus[1] = true
     }
     
     var output:String = ""
     
-    for l in Input {
+    for l in input {
         
-        let pbd = plugboard(l, PB)
+        let pbd = plugboardLinking(l, plugboardDictionary)
         
-        S3.state_up()
+        Scramblers[2].updateState()
         
-        if x! {
-            S2.state_up()
-            x = false
-            z = true
+        if turnOverNotchStatus[0]! {
+            Scramblers[1].updateState()
+            turnOverNotchStatus[0] = false
+            turnOverNotchStatus[2] = true
         }
-        if y! && z! {
-            S1.state_up()
-            S2.state_up()
-            y = false
-            z = false
-        }
-        
-        let letter_new1 = S3.forward(pbd)
-        let letter_new2 = S2.forward(letter_new1)
-        let letter_new3 : Character? = S1.forward(letter_new2)
-        
-        if S3.State == ASCII[S3.TurnOverNotch] {
-            x = true
-        }
-        if S2.State == ASCII[S2.TurnOverNotch] {
-            y = true
+        if turnOverNotchStatus[1]! && turnOverNotchStatus[2]! {
+            Scramblers[0].updateState()
+            Scramblers[1].updateState()
+            turnOverNotchStatus[1] = false
+            turnOverNotchStatus[2] = false
         }
         
-        let rf : Character? = Scramblers[5][letter_new3!]
-        let letter_back1 = S1.backward(rf!)
-        let letter_back2 = S2.backward(letter_back1)
-        let letter_back3 : Character? = S3.backward(letter_back2)
+        let letter_new1 = Scramblers[2].turnClockwise(pbd)
+        let letter_new2 = Scramblers[1].turnClockwise(letter_new1)
+        let letter_new3 = Scramblers[0].turnClockwise(letter_new2)
         
-        let pbd2:Character? = plugboard(letter_back3!, PB)
+        if Scramblers[2].state == Scramblers[2].turnOverNotch.formattedAsciiValue() {
+            turnOverNotchStatus[0] = true
+        }
+        if Scramblers[1].state == Scramblers[1].turnOverNotch.formattedAsciiValue() {
+            turnOverNotchStatus[1] = true
+        }
+        
+        let rf : Character? = ScramblerWiring[5][letter_new3!]
+        let letter_back1 = Scramblers[0].turnAntiClockwise(rf!)
+        let letter_back2 = Scramblers[1].turnAntiClockwise(letter_back1)
+        let letter_back3 = Scramblers[2].turnAntiClockwise(letter_back2)
+        
+        let pbd2:Character? = plugboardLinking(letter_back3!, plugboardDictionary)
         
         output.append(pbd2!)
         
@@ -158,7 +116,7 @@ func Enigma(_ Input:String, _ Plugboard:String, _ SL:[String]?, _ SP:[Character]
     return output
 }
 
-func plugboard(_ l : Character, _ PB : [Character:Character]) -> Character {
+func plugboardLinking(_ l : Character, _ PB : [Character:Character]) -> Character {
     
     var pbo : Character! = l
     if PB[l] != nil {

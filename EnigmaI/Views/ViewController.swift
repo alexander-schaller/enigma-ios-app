@@ -82,6 +82,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         //Set up Output Text Field
         // TODO: Replace textfield with text view and make it look like it should with shrinking text size, etc.
         OutputTextView.isEditable = false
+        OutputTextView.textContainerInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         
         
         //Set properties for the navigation bar buttons
@@ -153,7 +154,7 @@ class ViewController: UIViewController, UITextViewDelegate {
     
     //Add a Space after two characters have been entered
     @IBAction func addTrailingSpace() {
-        PlugboardInput.text! = AddTrailingSpace(of: PlugboardInput.text!.replacingOccurrences(of: " ", with: ""))
+        PlugboardInput.text! = EnigmaI.addTrailingSpace(of: PlugboardInput.text!.replacingOccurrences(of: " ", with: ""))
         
         let text:String? = PlugboardInput.text!.replacingOccurrences(of: " ", with: "")
         
@@ -210,7 +211,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         
         for i in input {
             
-            if ASCII[i] != nil || i == " " {
+            if i.isASCII || i == " " {
                 temp.append(i)
             }
             
@@ -284,38 +285,4 @@ class ViewController: UIViewController, UITextViewDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     
-}
-
-
-extension ViewController: UITextFieldDelegate {
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        return textField != self.OutputTextView
-    }
-    
-}
-// Extenstion for the StackView to get a property that adds a background and curves the corner
-extension UIStackView {
-    func addBackground(color: UIColor, cornerRadius: CGFloat) {
-        let subView = UIView(frame: bounds)
-        subView.backgroundColor = color
-        subView.layer.cornerRadius = cornerRadius
-        subView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        insertSubview(subView, at: 0)
-    }
-}
-
-extension UITextField {
-    func addRoundedCornersAndBackground(backgroundColor: UIColor, cornerRadius: CGFloat) {
-        self.backgroundColor = backgroundColor
-        self.layer.cornerRadius = cornerRadius
-        self.clipsToBounds = true
-    }
-}
-
-extension UIButton {
-    func formatToSpec(backgroundColor: UIColor, cornerRadius: CGFloat) {
-        self.backgroundColor = backgroundColor
-        self.layer.cornerRadius = cornerRadius
-    }
 }

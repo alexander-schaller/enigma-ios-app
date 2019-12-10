@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RK9-jQ-d8c">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RK9-jQ-d8c">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="fPM-O0-ao9">
-                                <rect key="frame" x="10" y="0.0" width="355" height="407"/>
+                                <rect key="frame" x="10" y="0.0" width="355" height="411"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="center" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="hJj-hX-XWf">
                                         <rect key="frame" x="0.0" y="15" width="355" height="140.66666666666666"/>
@@ -96,7 +94,6 @@
                                                                             <attributes>
                                                                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <font key="NSFont" metaFont="system" size="15"/>
-                                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                             </attributes>
                                                                         </fragment>
                                                                     </attributedString>
@@ -113,7 +110,7 @@
                                                                         <fragment content="Scrambler 2">
                                                                             <attributes>
                                                                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                <font key="NSFont" size="15" name=".SFNSText"/>
+                                                                                <font key="NSFont" metaFont="system" size="15"/>
                                                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                             </attributes>
                                                                         </fragment>
@@ -131,7 +128,7 @@
                                                                         <fragment content="Scrambler 3">
                                                                             <attributes>
                                                                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                <font key="NSFont" size="15" name=".SFNSText"/>
+                                                                                <font key="NSFont" metaFont="system" size="15"/>
                                                                             </attributes>
                                                                         </fragment>
                                                                     </attributedString>
@@ -222,7 +219,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MJm-GY-iZe">
-                                        <rect key="frame" x="0.0" y="331.33333333333331" width="355" height="75.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="331.33333333333331" width="355" height="79.666666666666686"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="      PLUGBOARD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwf-8D-pFY">
                                                 <rect key="frame" x="14.999999999999993" y="4.9999999999999991" width="100.33333333333331" height="15.666666666666664"/>
@@ -231,7 +228,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sng-hT-q5Y">
-                                                <rect key="frame" x="15" y="30.666666666666686" width="325" height="30"/>
+                                                <rect key="frame" x="15" y="30.666666666666686" width="325" height="34"/>
                                                 <edgeInsets key="layoutMargins" top="5" left="0.0" bottom="0.0" right="0.0"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -259,14 +256,14 @@
                                 <rect key="frame" x="10" y="518" width="355" height="115"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="white" keyboardDismissMode="onDrag" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sHq-du-nD3">
-                                        <rect key="frame" x="10" y="20" width="335" height="30"/>
+                                        <rect key="frame" x="10" y="20" width="335" height="26"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                     </textView>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="753" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ohg-if-sCn">
-                                        <rect key="frame" x="10" y="65" width="335" height="30"/>
+                                        <rect key="frame" x="10" y="61" width="335" height="34"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" keyboardAppearance="alert" returnKeyType="go" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -283,7 +280,7 @@
                                 <edgeInsets key="layoutMargins" top="20" left="10" bottom="20" right="10"/>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="fPM-O0-ao9" secondAttribute="trailing" constant="15" id="74r-oZ-OV2"/>
@@ -333,8 +330,9 @@
                             <outletCollection property="gestureRecognizers" destination="2sm-Hv-Mza" appends="YES" id="Wg1-hJ-byl"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Enigma I" id="Avh-B8-61o">
+                    <navigationItem key="navigationItem" title="Enigma I" largeTitleDisplayMode="always" id="Avh-B8-61o">
                         <barButtonItem key="leftBarButtonItem" title="Help" id="GWl-nK-SHH">
+                            <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
                                 <action selector="didTapHelpButton:" destination="BYZ-38-t0r" id="dKZ-U6-wtX"/>
                             </connections>
@@ -345,6 +343,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="InputText" destination="ohg-if-sCn" id="VoL-nG-kuW"/>
                         <outlet property="NavigationBarHome" destination="Avh-B8-61o" id="1Gf-1r-Dvj"/>
@@ -401,7 +400,7 @@
                                             <rect key="frame" x="0.0" y="91" width="375" height="721"/>
                                             <subviews>
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6n-dO-Mr5" userLabel="View1">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="606.66666666666663"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="610.66666666666663"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scramblers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ST-2R-KPR">
                                                             <rect key="frame" x="20" y="10" width="335" height="29"/>
@@ -440,8 +439,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b4Y-Ks-jj3">
-                                                            <rect key="frame" x="20" y="423" width="335" height="30"/>
-                                                            <nil key="textColor"/>
+                                                            <rect key="frame" x="20" y="423" width="335" height="34"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
@@ -458,25 +456,25 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder 4 Page 1; Info View" lineBreakMode="middleTruncation" numberOfLines="100" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvA-hu-uLh">
-                                                            <rect key="frame" x="20" y="501.99999999999994" width="335" height="20.333333333333314"/>
+                                                            <rect key="frame" x="20" y="505.99999999999994" width="335" height="20.333333333333314"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encryption" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hl6-Kx-I6X">
-                                                            <rect key="frame" x="20" y="468" width="335" height="29"/>
+                                                            <rect key="frame" x="20" y="472" width="335" height="29"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Decryption" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LdU-Yh-WDt">
-                                                            <rect key="frame" x="20" y="537.33333333333337" width="335" height="29"/>
+                                                            <rect key="frame" x="20" y="541.33333333333337" width="335" height="29"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder 5 Page 1; Info View" lineBreakMode="middleTruncation" numberOfLines="100" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBw-so-xlP">
-                                                            <rect key="frame" x="20" y="571.33333333333337" width="335" height="20.333333333333371"/>
+                                                            <rect key="frame" x="20" y="575.33333333333337" width="335" height="20.333333333333371"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                             <nil key="highlightedColor"/>
@@ -570,7 +568,6 @@
                             <constraint firstItem="owR-3e-ST2" firstAttribute="width" secondItem="Hnj-Jr-hik" secondAttribute="width" id="11v-oe-eCo"/>
                             <constraint firstItem="owR-3e-ST2" firstAttribute="centerX" secondItem="Hnj-Jr-hik" secondAttribute="centerX" id="Bus-14-JDD"/>
                             <constraint firstItem="owR-3e-ST2" firstAttribute="centerY" secondItem="Hnj-Jr-hik" secondAttribute="centerY" id="cO3-vo-FFU"/>
-                            <constraint firstItem="xJa-4I-wPg" firstAttribute="width" secondItem="Hnj-Jr-hik" secondAttribute="width" id="eph-O6-qlv"/>
                             <constraint firstItem="owR-3e-ST2" firstAttribute="height" secondItem="Hnj-Jr-hik" secondAttribute="height" id="zsE-8C-tgH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Mxb-lO-vgM"/>
@@ -647,11 +644,18 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RK9-jQ-d8c" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="LOV-QK-uFJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="LOV-QK-uFJ">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="barTintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

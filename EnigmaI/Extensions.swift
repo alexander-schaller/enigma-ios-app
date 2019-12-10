@@ -98,9 +98,10 @@ extension UITextField {
     
     // Makes a rounded text field with a specific corner radius and background color
     public func addRoundedCornersAndBackground(backgroundColor: UIColor, cornerRadius: CGFloat) {
+        self.borderStyle = .roundedRect
         self.backgroundColor = backgroundColor
-        self.layer.cornerRadius = cornerRadius
-        self.clipsToBounds = true
+        //self.layer.cornerRadius = cornerRadius
+        //self.clipsToBounds = true
     }
 }
 

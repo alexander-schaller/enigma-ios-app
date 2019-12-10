@@ -9,8 +9,6 @@
 import Foundation
 
 // TODO: Create a model out of this taking data from the json file
-let path = Bundle.main.path(forResource: "ScramblerWiringData", ofType: "json")
-let wiringData = try? NSData(contentsOfFile: path!, options: NSData.ReadingOptions.mappedIfSafe)
 
 let TON : [Character] = ["Q","E","V","J","Z"]
 

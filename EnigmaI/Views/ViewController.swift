@@ -49,31 +49,31 @@ class ViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var inputOutputStackView: UIStackView!
     
     //Custom Colors
-    let darkGrayBackgroundColor = UIColor(red: 37/255, green: 37/255, blue: 37/255, alpha: 1)
-    let lightGrayBackgroundColor = UIColor(red: 57/255, green: 57/255, blue: 57/255, alpha: 1)
-    
-    //Change Statusbar Style
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
+    var darkGrayBackgroundColor = UIColor(red: 37/255, green: 37/255, blue: 37/255, alpha: 1)
+    var lightGrayBackgroundColor = UIColor(red: 57/255, green: 57/255, blue: 57/255, alpha: 1)
+    var labelColor = UIColor.white
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        //Change Statusbar style
-        self.setNeedsStatusBarAppearanceUpdate()
+        if #available(iOS 13.0, *) {
+            darkGrayBackgroundColor = UIColor.secondarySystemFill
+            lightGrayBackgroundColor = UIColor.secondarySystemBackground
+        }
+        
+        
         
         //Set up of Plugboard Input Field
         PlugboardInput.autocapitalizationType = UITextAutocapitalizationType(rawValue: 3)!
-        PlugboardInput.keyboardAppearance = UIKeyboardAppearance(rawValue: 1)!
+        PlugboardInput.keyboardAppearance = UIKeyboardAppearance(rawValue: 0)!
         PlugboardInput.returnKeyType = UIReturnKeyType(rawValue: 9)!
         PlugboardInput.autocorrectionType = UITextAutocorrectionType(rawValue: 1)!
         PlugboardInput.addRoundedCornersAndBackground(backgroundColor: lightGrayBackgroundColor, cornerRadius: 10.0)
         
         //Set up of Input Text Field
         InputText.autocapitalizationType = UITextAutocapitalizationType(rawValue: 3)!
-        InputText.keyboardAppearance = UIKeyboardAppearance(rawValue: 1)!
+        InputText.keyboardAppearance = UIKeyboardAppearance(rawValue: 0)!
         InputText.returnKeyType = UIReturnKeyType(rawValue: 1)!
         InputText.placeholder = "Input"
         InputText.attributedPlaceholder = NSAttributedString(string: "  Input", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
@@ -119,6 +119,10 @@ class ViewController: UIViewController, UITextViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
+        if #available(iOS 13.0, *) {
+            labelColor = UIColor.label
+        }
+        
         // Retrieve the data from the global variables that get the data from the picker view
         let SL:[String] = [String(global.select[0] as! String), String(global.select[1] as! String), String(global.select[2] as! String)]
         let SP:[Character] = [Character(global.select[3] as! String), Character(global.select[4] as! String), Character(global.select[5] as! String)]
@@ -129,7 +133,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         Scrambler2Place.setImage(UIImage(named: "Scrambler\(SL[1])_EnigmaApp"), for: UIControl.State(rawValue: 0))
         Scrambler3Place.setImage(UIImage(named: "Scrambler\(SL[2])_EnigmaApp"), for: UIControl.State(rawValue: 0))
         
-        let attributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 17.0)]
+        let attributes = [NSAttributedString.Key.foregroundColor: labelColor, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 17.0)]
         
         // Set the value for the scrambler button title based on the data from the picker
         Scrambler1.setAttributedTitle(NSAttributedString(string: "\(SP[0])", attributes: attributes), for: UIControl.State(rawValue: 0))

@@ -12,6 +12,7 @@ import SwiftUI
 struct PickerSwiftUIView: View {
     
     var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    var title : String
     @State var selectedLetter = 0;
     
     var body: some View {
@@ -25,7 +26,7 @@ struct PickerSwiftUIView: View {
                 }
                 .padding(.bottom, 15)
                 .labelsHidden()
-                .navigationBarTitle(Text("Pick a Letter"))
+                .navigationBarTitle(Text(title))
             }
         }
     }
@@ -34,6 +35,6 @@ struct PickerSwiftUIView: View {
 @available(iOS 13.0.0, *)
 struct PickerSwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        PickerSwiftUIView()
+        PickerSwiftUIView(title: "Scramblers")
     }
 }

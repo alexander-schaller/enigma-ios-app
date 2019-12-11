@@ -26,58 +26,43 @@ struct ButtonStackViewSwiftUI: View {
                     .padding(.leading)
                 Spacer()
             }
-            Button(action: {
-                PickerSwiftUIView()
-                
-            }, label: {
+            NavigationLink(destination: PickerSwiftUIView(title: title)) {
                 Spacer()
                 Text(labelButton1)
                     .foregroundColor(.primary)
                     .bold()
                 
                 Spacer()
-            })
-                .padding(.leading, 25)
-                .padding(.trailing, 25)
-                .padding(.top, 2)
-                .padding(.bottom, 2)
+            }
+                .padding([.leading, .trailing], 25)
+                .padding([.top, .bottom], 2)
                 .background(Color.init(UIColor.systemFill))
                 .cornerRadius(5)
-            Button(action: {
-                // -TODO: Open Picker View
-            }, label: {
+            NavigationLink(destination: PickerSwiftUIView(title: title)) {
                 Spacer()
                 Text(labelButton2)
                     .foregroundColor(.primary)
                     .bold()
                 Spacer()
-            })
-            .padding(.leading, 25)
-            .padding(.trailing, 25)
-            .padding(.top, 2)
-            .padding(.bottom, 2)
+            }
+            .padding([.leading, .trailing], 25)
+            .padding([.top, .bottom], 2)
             .background(Color.init(UIColor.systemFill))
             .cornerRadius(5)
-            Button(action: {
-                // -TODO: Open Picker View
-            }, label: {
+            NavigationLink(destination: PickerSwiftUIView(title: title)) {
                 Spacer()
                 Text(labelButton3)
                     .foregroundColor(.primary)
                     .bold()
                 Spacer()
-            })
-            .padding(.leading, 25)
-            .padding(.trailing, 25)
-            .padding(.top, 2)
-            .padding(.bottom, 2)
+            }
+            .padding([.leading, .trailing], 25)
+            .padding([.top, .bottom], 2)
             .background(Color.init(UIColor.systemFill))
             .cornerRadius(5)
         }
         .padding(.top, 5)
-        .padding(.bottom, 12)
-        .padding(.leading, 12)
-        .padding(.trailing, 12)
+        .padding([.bottom, .leading, .trailing], 12)
         .background(Color.init(UIColor.secondarySystemBackground))
     .cornerRadius(25)
         

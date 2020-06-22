@@ -8,33 +8,37 @@
 
 import SwiftUI
 
-@available(iOS 13.0.0, *)
+@available(iOS 13, *)
 struct PickerSwiftUIView: View {
     
     var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     var title : String
-    @State var selectedLetter = 0;
+    @Binding var selectedLetter: Int
     
     var body: some View {
-        NavigationView {
-            VStack {
-                Spacer()
-                Picker(selection: $selectedLetter, label: Text("")) {
-                    ForEach(0..<letters.count) {
+        VStack {
+            Spacer()
+            Picker(selection: $selectedLetter, label: Text("")) {
+                ForEach(0..<letters.count) {
+                    if self.title.contains("Ring") {
+                        Text("\($0 + 1)")
+                    } else if self.title.contains("Scramblers"){
                         Text(self.letters[$0])
+                    } else {
+                        Text(($0 + 1).toRoman)
                     }
                 }
-                .padding(.bottom, 15)
-                .labelsHidden()
-                .navigationBarTitle(Text(title))
             }
+            .padding(.bottom, 15)
+            .labelsHidden()
+            .navigationBarTitle(Text(title))
         }
     }
 }
 
-@available(iOS 13.0.0, *)
+@available(iOS 13, *)
 struct PickerSwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        PickerSwiftUIView(title: "Scramblers")
+        PickerSwiftUIView(title: "Pick", selectedLetter: Binding<Int>.constant(0))
     }
 }

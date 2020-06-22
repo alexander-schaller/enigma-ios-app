@@ -40,6 +40,7 @@ extension String {
             return 0
         }
     }
+
 }
 
 extension Character {
@@ -57,6 +58,23 @@ extension Int {
         let unicodeScalar = UnicodeScalar(self + 65)
         let character = Character(unicodeScalar!)
         return character
+    }
+    
+    var toRoman: String {
+        switch self {
+        case 1:
+            return "I"
+        case 2:
+            return "II"
+        case 3:
+            return "III"
+        case 4:
+            return "IV"
+        case 5:
+            return "V"
+        default:
+            return "undef."
+        }
     }
 }
 
@@ -109,5 +127,26 @@ extension UIButton {
     public func formatToSpec(backgroundColor: UIColor, cornerRadius: CGFloat) {
         self.backgroundColor = backgroundColor
         self.layer.cornerRadius = cornerRadius
+    }
+}
+
+extension UIViewController {
+    func add(_ child: UIViewController, frame: CGRect) {
+        addChild(child)
+        child.view.frame = frame
+        view.addSubview(child.view)
+        child.didMove(toParent: self)
+    }
+
+    func remove() {
+        // Just to be safe, we check that this view controller
+        // is actually added to a parent before removing it.
+        guard parent != nil else {
+            return
+        }
+
+        willMove(toParent: nil)
+        view.removeFromSuperview()
+        removeFromParent()
     }
 }

@@ -9,7 +9,12 @@
 /* Begin PBXBuildFile section */
 		3D30C7C822B02AED00053152 /* ScramblerWiringData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D30C7C722B02AED00053152 /* ScramblerWiringData.json */; };
 		3D30C7CA22B03F9B00053152 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D30C7C922B03F9B00053152 /* Extensions.swift */; };
-		3DA33F3923A15B7F00D8C164 /* ButtonStackViewSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA33F3823A15B7F00D8C164 /* ButtonStackViewSwiftUI.swift */; };
+		3D466C2E24A0EB770091CE48 /* PlugboardSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D466C2D24A0EB770091CE48 /* PlugboardSwiftUIView.swift */; };
+		3D466C3024A0ECA30091CE48 /* ContainerSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D466C2F24A0ECA30091CE48 /* ContainerSwiftUIView.swift */; };
+		3D466C3324A0F9E30091CE48 /* ScramblerPickerSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D466C3224A0F9E30091CE48 /* ScramblerPickerSwiftUIView.swift */; };
+		3D466C3524A118400091CE48 /* KeyboardGuardian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D466C3424A118400091CE48 /* KeyboardGuardian.swift */; };
+		3D862F0723A5008D00EC9698 /* OutputSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D862F0623A5008D00EC9698 /* OutputSwiftUIView.swift */; };
+		3DA33F3923A15B7F00D8C164 /* ButtonStackSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA33F3823A15B7F00D8C164 /* ButtonStackSwiftUIView.swift */; };
 		3DA33F3B23A168A200D8C164 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA33F3A23A168A200D8C164 /* ContentView.swift */; };
 		3DA33F3D23A186EC00D8C164 /* PickerSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA33F3C23A186EC00D8C164 /* PickerSwiftUIView.swift */; };
 		3DC29D631F93E72B00A3F390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC29D621F93E72B00A3F390 /* AppDelegate.swift */; };
@@ -20,6 +25,11 @@
 		3DCCB1E42118D25500C6783E /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCB1E32118D25500C6783E /* InfoView.swift */; };
 		3DDB4B0820017A5C008BE64F /* Scramblers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDB4B0720017A5C008BE64F /* Scramblers.swift */; };
 		3DDB4B0A20017B80008BE64F /* Wiring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDB4B0920017B80008BE64F /* Wiring.swift */; };
+		3DDC4576247C0C0C00F012AB /* InfoSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDC4575247C0C0C00F012AB /* InfoSwiftUIView.swift */; };
+		3DDC4578247C132000F012AB /* InfoTextSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDC4577247C132000F012AB /* InfoTextSwiftUIView.swift */; };
+		3DDC457C247C349100F012AB /* EnigmaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDC457B247C349100F012AB /* EnigmaViewController.swift */; };
+		3DDC457E247C365D00F012AB /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DDC457D247C365D00F012AB /* Start.storyboard */; };
+		3DDC4580247D43F900F012AB /* NavigationContentSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDC457F247D43F900F012AB /* NavigationContentSwiftUIView.swift */; };
 		50761C5DD40618D98D984E76 /* Pods_EnigmaI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C651FB21CDCBFA09FAC2A0A4 /* Pods_EnigmaI.framework */; };
 		FA98DA7F1FED208400B7C533 /* Enigma.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98DA7E1FED208400B7C533 /* Enigma.swift */; };
 		FAEA4C582000E24600CE7899 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA4C572000E24600CE7899 /* PickerView.swift */; };
@@ -29,7 +39,12 @@
 		10AD715DC46A1A3C9F091375 /* Pods-EnigmaI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnigmaI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EnigmaI/Pods-EnigmaI.debug.xcconfig"; sourceTree = "<group>"; };
 		3D30C7C722B02AED00053152 /* ScramblerWiringData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ScramblerWiringData.json; sourceTree = "<group>"; };
 		3D30C7C922B03F9B00053152 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = ../Extensions.swift; sourceTree = "<group>"; };
-		3DA33F3823A15B7F00D8C164 /* ButtonStackViewSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStackViewSwiftUI.swift; sourceTree = "<group>"; };
+		3D466C2D24A0EB770091CE48 /* PlugboardSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlugboardSwiftUIView.swift; sourceTree = "<group>"; };
+		3D466C2F24A0ECA30091CE48 /* ContainerSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerSwiftUIView.swift; sourceTree = "<group>"; };
+		3D466C3224A0F9E30091CE48 /* ScramblerPickerSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScramblerPickerSwiftUIView.swift; sourceTree = "<group>"; };
+		3D466C3424A118400091CE48 /* KeyboardGuardian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardGuardian.swift; sourceTree = "<group>"; };
+		3D862F0623A5008D00EC9698 /* OutputSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputSwiftUIView.swift; sourceTree = "<group>"; };
+		3DA33F3823A15B7F00D8C164 /* ButtonStackSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStackSwiftUIView.swift; sourceTree = "<group>"; };
 		3DA33F3A23A168A200D8C164 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3DA33F3C23A186EC00D8C164 /* PickerSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerSwiftUIView.swift; sourceTree = "<group>"; };
 		3DC29D5F1F93E72A00A3F390 /* EnigmaI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnigmaI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +57,11 @@
 		3DCCB1E32118D25500C6783E /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		3DDB4B0720017A5C008BE64F /* Scramblers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scramblers.swift; sourceTree = "<group>"; };
 		3DDB4B0920017B80008BE64F /* Wiring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wiring.swift; sourceTree = "<group>"; };
+		3DDC4575247C0C0C00F012AB /* InfoSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSwiftUIView.swift; sourceTree = "<group>"; };
+		3DDC4577247C132000F012AB /* InfoTextSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTextSwiftUIView.swift; sourceTree = "<group>"; };
+		3DDC457B247C349100F012AB /* EnigmaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnigmaViewController.swift; sourceTree = "<group>"; };
+		3DDC457D247C365D00F012AB /* Start.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
+		3DDC457F247D43F900F012AB /* NavigationContentSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationContentSwiftUIView.swift; sourceTree = "<group>"; };
 		C651FB21CDCBFA09FAC2A0A4 /* Pods_EnigmaI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnigmaI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D369F9EBA0E5D075467F4653 /* Pods-EnigmaI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnigmaI.release.xcconfig"; path = "Pods/Target Support Files/Pods-EnigmaI/Pods-EnigmaI.release.xcconfig"; sourceTree = "<group>"; };
 		FA43240B1FD5AB2E00F7D1A2 /* EnigmaI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EnigmaI.entitlements; sourceTree = "<group>"; };
@@ -101,6 +121,7 @@
 			children = (
 				3DCCB1E32118D25500C6783E /* InfoView.swift */,
 				3DC29D641F93E72B00A3F390 /* ViewController.swift */,
+				3DDC457B247C349100F012AB /* EnigmaViewController.swift */,
 				FAEA4C572000E24600CE7899 /* PickerView.swift */,
 			);
 			path = Views;
@@ -109,9 +130,17 @@
 		3DA33F3523A15B0400D8C164 /* SwiftUIViews */ = {
 			isa = PBXGroup;
 			children = (
-				3DA33F3823A15B7F00D8C164 /* ButtonStackViewSwiftUI.swift */,
+				3D466C2F24A0ECA30091CE48 /* ContainerSwiftUIView.swift */,
+				3DDC4577247C132000F012AB /* InfoTextSwiftUIView.swift */,
+				3DA33F3823A15B7F00D8C164 /* ButtonStackSwiftUIView.swift */,
 				3DA33F3A23A168A200D8C164 /* ContentView.swift */,
+				3DDC457F247D43F900F012AB /* NavigationContentSwiftUIView.swift */,
 				3DA33F3C23A186EC00D8C164 /* PickerSwiftUIView.swift */,
+				3D862F0623A5008D00EC9698 /* OutputSwiftUIView.swift */,
+				3DDC4575247C0C0C00F012AB /* InfoSwiftUIView.swift */,
+				3D466C2D24A0EB770091CE48 /* PlugboardSwiftUIView.swift */,
+				3D466C3224A0F9E30091CE48 /* ScramblerPickerSwiftUIView.swift */,
+				3D466C3424A118400091CE48 /* KeyboardGuardian.swift */,
 			);
 			path = SwiftUIViews;
 			sourceTree = "<group>";
@@ -148,6 +177,7 @@
 				FA43240B1FD5AB2E00F7D1A2 /* EnigmaI.entitlements */,
 				3DC29D691F93E72B00A3F390 /* Assets.xcassets */,
 				3DC29D6E1F93E72B00A3F390 /* Info.plist */,
+				3DDC457D247C365D00F012AB /* Start.storyboard */,
 			);
 			path = EnigmaI;
 			sourceTree = "<group>";
@@ -221,6 +251,7 @@
 			files = (
 				3DC29D6D1F93E72B00A3F390 /* LaunchScreen.storyboard in Resources */,
 				3D30C7C822B02AED00053152 /* ScramblerWiringData.json in Resources */,
+				3DDC457E247C365D00F012AB /* Start.storyboard in Resources */,
 				3DC29D6A1F93E72B00A3F390 /* Assets.xcassets in Resources */,
 				3DC29D681F93E72B00A3F390 /* Main.storyboard in Resources */,
 			);
@@ -271,14 +302,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D466C3324A0F9E30091CE48 /* ScramblerPickerSwiftUIView.swift in Sources */,
+				3D466C3524A118400091CE48 /* KeyboardGuardian.swift in Sources */,
 				FAEA4C582000E24600CE7899 /* PickerView.swift in Sources */,
 				3DDB4B0A20017B80008BE64F /* Wiring.swift in Sources */,
 				3DC29D651F93E72B00A3F390 /* ViewController.swift in Sources */,
+				3DDC4578247C132000F012AB /* InfoTextSwiftUIView.swift in Sources */,
 				3D30C7CA22B03F9B00053152 /* Extensions.swift in Sources */,
 				3DC29D631F93E72B00A3F390 /* AppDelegate.swift in Sources */,
+				3DDC4580247D43F900F012AB /* NavigationContentSwiftUIView.swift in Sources */,
+				3D862F0723A5008D00EC9698 /* OutputSwiftUIView.swift in Sources */,
+				3D466C3024A0ECA30091CE48 /* ContainerSwiftUIView.swift in Sources */,
 				3DA33F3D23A186EC00D8C164 /* PickerSwiftUIView.swift in Sources */,
-				3DA33F3923A15B7F00D8C164 /* ButtonStackViewSwiftUI.swift in Sources */,
+				3DA33F3923A15B7F00D8C164 /* ButtonStackSwiftUIView.swift in Sources */,
 				3DA33F3B23A168A200D8C164 /* ContentView.swift in Sources */,
+				3D466C2E24A0EB770091CE48 /* PlugboardSwiftUIView.swift in Sources */,
+				3DDC457C247C349100F012AB /* EnigmaViewController.swift in Sources */,
+				3DDC4576247C0C0C00F012AB /* InfoSwiftUIView.swift in Sources */,
 				3DDB4B0820017A5C008BE64F /* Scramblers.swift in Sources */,
 				3DCCB1E42118D25500C6783E /* InfoView.swift in Sources */,
 				FA98DA7F1FED208400B7C533 /* Enigma.swift in Sources */,
@@ -432,6 +472,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "-354645634.EnigmaI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -452,6 +493,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "-354645634.EnigmaI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

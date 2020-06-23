@@ -82,7 +82,6 @@ class ViewController: UIViewController, UITextViewDelegate {
         InputText.addRoundedCornersAndBackground(backgroundColor: lightGrayBackgroundColor, cornerRadius: 10.0)
         
         //Set up Output Text Field
-        // TODO: Replace textfield with text view and make it look like it should with shrinking text size, etc.
         OutputTextView.isEditable = false
         OutputTextView.textContainerInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         

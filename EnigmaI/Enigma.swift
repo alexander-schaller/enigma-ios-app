@@ -76,6 +76,11 @@ func Enigma(_ input:String, _ plugboard:String, _ scramblerNumber:[String], _ sc
     
     for l in input {
         
+        if l == " " {
+            output.append(" ")
+            continue
+        }
+        
         let pbd = plugboardLinking(l, plugboardDictionary)
         
         Scramblers[2].updateState()

@@ -9,6 +9,14 @@
 import Foundation
 import UIKit
 
+var labelColor: UIColor {
+    if #available(iOS 13, *) {
+        return UIColor.label
+    } else {
+        return UIColor.white
+    }
+}
+
 class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     
@@ -23,7 +31,7 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     }
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        let attributedString = NSAttributedString(string: self.pickerData[row], attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
+        let attributedString = NSAttributedString(string: self.pickerData[row], attributes: [NSAttributedString.Key.foregroundColor : labelColor])
         return attributedString
     }
     

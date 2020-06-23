@@ -49,17 +49,19 @@ class ViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var inputOutputStackView: UIStackView!
     
     //Custom Colors
-    var darkGrayBackgroundColor = UIColor(red: 37/255, green: 37/255, blue: 37/255, alpha: 1)
-    var lightGrayBackgroundColor = UIColor(red: 57/255, green: 57/255, blue: 57/255, alpha: 1)
-    var labelColor = UIColor.white
+    var darkGrayBackgroundColor = UIColor(red: 229/255, green: 229/255, blue: 234/255, alpha: 1)
+    //var lightGrayBackgroundColor = UIColor(red: 199/255, green: 199/255, blue: 204/255, alpha: 1)
+    var lightGrayBackgroundColor = UIColor(red: 209/255, green: 209/255, blue: 214/255, alpha: 1)
+    var labelColor = UIColor.black
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         if #available(iOS 13.0, *) {
-            darkGrayBackgroundColor = UIColor.secondarySystemFill
-            lightGrayBackgroundColor = UIColor.secondarySystemBackground
+            darkGrayBackgroundColor = UIColor.secondarySystemBackground
+            lightGrayBackgroundColor = UIColor.secondarySystemFill
+            labelColor = UIColor.label
         }
         
         
@@ -121,6 +123,12 @@ class ViewController: UIViewController, UITextViewDelegate {
         
         if #available(iOS 13.0, *) {
             labelColor = UIColor.label
+        }
+        
+        if UIScreen.main.bounds.height >= 600 {
+            navigationController?.navigationBar.prefersLargeTitles = true
+        } else {
+            navigationController?.navigationBar.prefersLargeTitles = false
         }
         
         // Retrieve the data from the global variables that get the data from the picker view
@@ -195,7 +203,7 @@ class ViewController: UIViewController, UITextViewDelegate {
     
     //When return key is pressed run Enigma func
     @IBAction func returnKeyPressed() {
-        let input = InputText.text!.replacingOccurrences(of: " ", with: "").uppercased()
+        let input = InputText.text!.uppercased()
         
         let SL:[String] = [String(global.select[0] as! String), String(global.select[1] as! String), String(global.select[2] as! String)]
         let SP:[Character] = [Character(global.select[3] as! String), Character(global.select[4] as! String), Character(global.select[5] as! String)]

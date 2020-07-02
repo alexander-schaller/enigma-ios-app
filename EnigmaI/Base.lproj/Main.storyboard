@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RK9-jQ-d8c">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RK9-jQ-d8c">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,235 +13,291 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EnigmaI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="672"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="fPM-O0-ao9">
-                                <rect key="frame" x="15" y="0.0" width="345" height="373.66666666666669"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="fPM-O0-ao9">
+                                <rect key="frame" x="10" y="0.0" width="394" height="424"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Place the Scramblers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avd-6Q-jTG">
-                                        <rect key="frame" x="0.0" y="0.0" width="183.33333333333334" height="24"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="248" verticalHuggingPriority="248" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="747" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mW7-cS-Gs6">
-                                        <rect key="frame" x="0.0" y="34.000000000000007" width="345" height="111.66666666666669"/>
+                                    <stackView opaque="NO" contentMode="center" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="hJj-hX-XWf">
+                                        <rect key="frame" x="0.0" y="15" width="394" height="153.66666666666666"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WoZ-j6-2Hh">
-                                                <rect key="frame" x="0.0" y="0.0" width="111.66666666666667" height="111.66666666666667"/>
-                                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="      PICK SCRAMBLERS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avd-6Q-jTG">
+                                                <rect key="frame" x="0.0" y="4.9999999999999991" width="140.66666666666666" height="15.666666666666664"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="center" horizontalHuggingPriority="248" verticalHuggingPriority="248" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="747" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mW7-cS-Gs6">
+                                                <rect key="frame" x="0.0" y="20.666666666666671" width="394" height="133"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WoZ-j6-2Hh">
+                                                        <rect key="frame" x="10" y="4.9999999999999858" width="118" height="118"/>
+                                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="WoZ-j6-2Hh" secondAttribute="height" multiplier="1:1" id="L7Z-fa-tAX"/>
+                                                        </constraints>
+                                                        <state key="normal" image="ScramblerI_EnigmaApp"/>
+                                                        <connections>
+                                                            <action selector="didTapScrambler1:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="cwQ-yL-Ocv"/>
+                                                            <segue destination="Oon-mI-rN6" kind="presentation" id="avz-c8-pPX"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6X1-xf-FrV">
+                                                        <rect key="frame" x="138" y="4.9999999999999858" width="118" height="118"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="6X1-xf-FrV" secondAttribute="height" multiplier="1:1" id="JVE-u8-dpk"/>
+                                                        </constraints>
+                                                        <state key="normal" image="ScramblerII_EnigmaApp"/>
+                                                        <connections>
+                                                            <action selector="didTapScrambler2:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="vxi-o4-ebj"/>
+                                                            <segue destination="Oon-mI-rN6" kind="presentation" id="7Ss-Yv-iLj"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngt-qz-5KA">
+                                                        <rect key="frame" x="266" y="4.9999999999999858" width="118" height="118"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="ngt-qz-5KA" secondAttribute="height" multiplier="1:1" id="Agu-yc-CBF"/>
+                                                        </constraints>
+                                                        <state key="normal" image="ScramblerIII_EnigmaApp"/>
+                                                        <connections>
+                                                            <action selector="didTapScrambler3:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="XOk-5H-KGT"/>
+                                                            <segue destination="Oon-mI-rN6" kind="presentation" id="fik-2H-umA"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="5" left="10" bottom="10" right="10"/>
+                                            </stackView>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="5" left="0.0" bottom="0.0" right="0.0"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AlS-z2-aNc">
+                                        <rect key="frame" x="0.0" y="183.66666666666669" width="394" height="145.66666666666669"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="pFK-oI-5Yi">
+                                                <rect key="frame" x="0.0" y="0.0" width="192" height="145.66666666666666"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="      SCRAMBLERS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWa-fS-QPq">
+                                                        <rect key="frame" x="0.0" y="4.9999999999999991" width="107.66666666666667" height="15.666666666666664"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bBl-Vk-UpI">
+                                                        <rect key="frame" x="0.0" y="20.666666666666629" width="192" height="125"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k4s-3f-Ugz">
+                                                                <rect key="frame" x="10" y="5" width="172" height="30"/>
+                                                                <state key="normal">
+                                                                    <attributedString key="attributedTitle">
+                                                                        <fragment content="Scrambler 1">
+                                                                            <attributes>
+                                                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="didTapScramblerSet1:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="3gG-D2-ojP"/>
+                                                                    <segue destination="Oon-mI-rN6" kind="presentation" id="FdP-YY-8OW"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vll-1E-9vR">
+                                                                <rect key="frame" x="10" y="45" width="172" height="30"/>
+                                                                <state key="normal">
+                                                                    <attributedString key="attributedTitle">
+                                                                        <fragment content="Scrambler 2">
+                                                                            <attributes>
+                                                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="didTapScramblerSet2:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="0cq-pS-33v"/>
+                                                                    <segue destination="Oon-mI-rN6" kind="presentation" id="6JV-4c-2P7"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Zy-Oa-HF0">
+                                                                <rect key="frame" x="10" y="85" width="172" height="30"/>
+                                                                <state key="normal">
+                                                                    <attributedString key="attributedTitle">
+                                                                        <fragment content="Scrambler 3">
+                                                                            <attributes>
+                                                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="didTapScramblerSet3:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Iq8-Mp-Sc6"/>
+                                                                    <segue destination="Oon-mI-rN6" kind="presentation" id="8jl-lq-wmY"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <edgeInsets key="layoutMargins" top="5" left="10" bottom="10" right="10"/>
+                                                    </stackView>
+                                                </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="WoZ-j6-2Hh" secondAttribute="height" multiplier="1:1" id="L7Z-fa-tAX"/>
+                                                    <constraint firstAttribute="trailing" secondItem="bBl-Vk-UpI" secondAttribute="trailing" id="fQ7-3p-90c"/>
                                                 </constraints>
-                                                <state key="normal" image="ScramblerI_EnigmaApp"/>
-                                                <connections>
-                                                    <action selector="didTapScrambler1:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="cwQ-yL-Ocv"/>
-                                                    <segue destination="Oon-mI-rN6" kind="presentation" id="avz-c8-pPX"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6X1-xf-FrV">
-                                                <rect key="frame" x="116.66666666666666" y="0.0" width="111.66666666666666" height="111.66666666666667"/>
+                                                <edgeInsets key="layoutMargins" top="5" left="0.0" bottom="0.0" right="0.0"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="gAc-Pt-Uqt">
+                                                <rect key="frame" x="202" y="0.0" width="192" height="145.66666666666666"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="      SET RING" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18x-xX-yRr">
+                                                        <rect key="frame" x="0.0" y="4.9999999999999991" width="80.333333333333329" height="15.666666666666664"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Z2x-pi-kSq">
+                                                        <rect key="frame" x="0.0" y="20.666666666666629" width="192" height="125"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O0e-mu-GhH">
+                                                                <rect key="frame" x="10" y="5" width="172" height="30"/>
+                                                                <state key="normal">
+                                                                    <attributedString key="attributedTitle">
+                                                                        <fragment content="Ring 1">
+                                                                            <attributes>
+                                                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="didTapRing1:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="rKq-V1-PKU"/>
+                                                                    <segue destination="Oon-mI-rN6" kind="presentation" id="oO1-HM-16g"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zIQ-rU-T9f">
+                                                                <rect key="frame" x="10" y="45" width="172" height="30"/>
+                                                                <state key="normal">
+                                                                    <attributedString key="attributedTitle">
+                                                                        <fragment content="Ring 2">
+                                                                            <attributes>
+                                                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="didTapRing2:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="KPi-Ef-by4"/>
+                                                                    <segue destination="Oon-mI-rN6" kind="presentation" id="F9u-8S-pIz"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kdq-yS-tm9">
+                                                                <rect key="frame" x="10" y="85" width="172" height="30"/>
+                                                                <state key="normal">
+                                                                    <attributedString key="attributedTitle">
+                                                                        <fragment content="Ring 3">
+                                                                            <attributes>
+                                                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="didTapRing3:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="BRV-YX-7jp"/>
+                                                                    <segue destination="Oon-mI-rN6" kind="presentation" id="iqX-yA-75n"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <edgeInsets key="layoutMargins" top="5" left="10" bottom="10" right="10"/>
+                                                    </stackView>
+                                                </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="6X1-xf-FrV" secondAttribute="height" multiplier="1:1" id="JVE-u8-dpk"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Z2x-pi-kSq" secondAttribute="trailing" id="a3j-iK-kWN"/>
                                                 </constraints>
-                                                <state key="normal" image="ScramblerII_EnigmaApp"/>
+                                                <edgeInsets key="layoutMargins" top="5" left="0.0" bottom="0.0" right="0.0"/>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MJm-GY-iZe">
+                                        <rect key="frame" x="0.0" y="344.33333333333331" width="394" height="79.666666666666686"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="  PLUGBOARD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwf-8D-pFY">
+                                                <rect key="frame" x="15" y="4.9999999999999991" width="86" height="15.666666666666664"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sng-hT-q5Y">
+                                                <rect key="frame" x="15" y="30.666666666666686" width="364" height="34"/>
+                                                <edgeInsets key="layoutMargins" top="5" left="0.0" bottom="0.0" right="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
                                                 <connections>
-                                                    <action selector="didTapScrambler2:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="vxi-o4-ebj"/>
-                                                    <segue destination="Oon-mI-rN6" kind="presentation" id="7Ss-Yv-iLj"/>
+                                                    <action selector="addTrailingSpace" destination="BYZ-38-t0r" eventType="editingChanged" id="kpa-0q-ijq"/>
+                                                    <action selector="didPressDone:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="RsM-U6-5rl"/>
                                                 </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngt-qz-5KA">
-                                                <rect key="frame" x="233.33333333333334" y="0.0" width="111.66666666666666" height="111.66666666666667"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="ngt-qz-5KA" secondAttribute="height" multiplier="1:1" id="Agu-yc-CBF"/>
-                                                </constraints>
-                                                <state key="normal" image="ScramblerIII_EnigmaApp"/>
-                                                <connections>
-                                                    <action selector="didTapScrambler3:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="XOk-5H-KGT"/>
-                                                    <segue destination="Oon-mI-rN6" kind="presentation" id="fik-2H-umA"/>
-                                                </connections>
-                                            </button>
+                                            </textField>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="335.67000000000002" id="5WY-JQ-5ja"/>
+                                            <constraint firstItem="Sng-hT-q5Y" firstAttribute="centerX" secondItem="MJm-GY-iZe" secondAttribute="centerX" id="JYa-rB-19L"/>
                                         </constraints>
+                                        <edgeInsets key="layoutMargins" top="5" left="15" bottom="15" right="15"/>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Set the Scramblers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWa-fS-QPq">
-                                        <rect key="frame" x="0.0" y="155.66666666666669" width="165" height="24"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bBl-Vk-UpI">
-                                        <rect key="frame" x="0.0" y="189.66666666666669" width="345" height="33"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k4s-3f-Ugz">
-                                                <rect key="frame" x="0.0" y="0.0" width="107.33333333333333" height="33"/>
-                                                <state key="normal" backgroundImage="Image">
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="Scrambler 1">
-                                                            <attributes>
-                                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <font key="NSFont" metaFont="system" size="15"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                </state>
-                                                <connections>
-                                                    <action selector="didTapScramblerSet1:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="3gG-D2-ojP"/>
-                                                    <segue destination="Oon-mI-rN6" kind="presentation" id="FdP-YY-8OW"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vll-1E-9vR">
-                                                <rect key="frame" x="117.33333333333334" y="0.0" width="107.33333333333334" height="33"/>
-                                                <state key="normal" backgroundImage="Image">
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="Scrambler 2">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <font key="NSFont" size="15" name=".SFNSText"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                </state>
-                                                <connections>
-                                                    <action selector="didTapScramblerSet2:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="0cq-pS-33v"/>
-                                                    <segue destination="Oon-mI-rN6" kind="presentation" id="6JV-4c-2P7"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Zy-Oa-HF0">
-                                                <rect key="frame" x="234.66666666666666" y="0.0" width="110.33333333333334" height="33"/>
-                                                <state key="normal" backgroundImage="Image">
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="Scrambler 3">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <font key="NSFont" metaFont="system" size="15"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                </state>
-                                                <connections>
-                                                    <action selector="didTapScramblerSet3:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Iq8-Mp-Sc6"/>
-                                                    <segue destination="Oon-mI-rN6" kind="presentation" id="8jl-lq-wmY"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Set the Ring" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18x-xX-yRr">
-                                        <rect key="frame" x="0.0" y="232.66666666666669" width="105.33333333333333" height="24"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Z2x-pi-kSq">
-                                        <rect key="frame" x="0.0" y="266.66666666666669" width="345" height="33"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0e-mu-GhH">
-                                                <rect key="frame" x="0.0" y="0.0" width="107.33333333333333" height="33"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <state key="normal" title="Ring 1" backgroundImage="Image"/>
-                                                <connections>
-                                                    <action selector="didTapRing1:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="rKq-V1-PKU"/>
-                                                    <segue destination="Oon-mI-rN6" kind="presentation" id="oO1-HM-16g"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIQ-rU-T9f">
-                                                <rect key="frame" x="117.33333333333334" y="0.0" width="107.33333333333334" height="33"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <state key="normal" title="Ring 2" backgroundImage="Image"/>
-                                                <connections>
-                                                    <action selector="didTapRing2:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="KPi-Ef-by4"/>
-                                                    <segue destination="Oon-mI-rN6" kind="presentation" id="F9u-8S-pIz"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdq-yS-tm9">
-                                                <rect key="frame" x="234.66666666666666" y="0.0" width="110.33333333333334" height="33"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <state key="normal" title="Ring 3" backgroundImage="Image"/>
-                                                <connections>
-                                                    <action selector="didTapRing3:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="BRV-YX-7jp"/>
-                                                    <segue destination="Oon-mI-rN6" kind="presentation" id="iqX-yA-75n"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Set the Plugboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwf-8D-pFY">
-                                        <rect key="frame" x="0.0" y="309.66666666666669" width="155.33333333333334" height="24"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sng-hT-q5Y">
-                                        <rect key="frame" x="0.0" y="343.66666666666669" width="345" height="30"/>
-                                        <nil key="textColor"/>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="AlS-z2-aNc" secondAttribute="trailing" id="8qZ-iD-BP8"/>
+                                    <constraint firstAttribute="trailing" secondItem="MJm-GY-iZe" secondAttribute="trailing" id="wtB-RG-g83"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="15" left="0.0" bottom="0.0" right="0.0"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="eVb-De-F3W">
+                                <rect key="frame" x="10" y="654" width="394" height="115"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="white" keyboardDismissMode="onDrag" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sHq-du-nD3">
+                                        <rect key="frame" x="10" y="20" width="374" height="26"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textView>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="753" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ohg-if-sCn">
+                                        <rect key="frame" x="10" y="61" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" keyboardAppearance="alert" returnKeyType="go" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                         <connections>
-                                            <action selector="addTrailingSpace" destination="BYZ-38-t0r" eventType="editingChanged" id="kpa-0q-ijq"/>
-                                            <action selector="didPressDone:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="RsM-U6-5rl"/>
+                                            <action selector="checkForNonConform" destination="BYZ-38-t0r" eventType="editingChanged" id="Ns9-17-89I"/>
+                                            <action selector="pressField:" destination="BYZ-38-t0r" eventType="touchDown" id="LyJ-Lv-mGX"/>
+                                            <action selector="returnKeyPressed" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="ZWg-ed-xQg"/>
                                         </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="mW7-cS-Gs6" firstAttribute="top" secondItem="avd-6Q-jTG" secondAttribute="bottom" constant="10" id="2y9-XY-PMM"/>
-                                    <constraint firstAttribute="trailing" secondItem="bBl-Vk-UpI" secondAttribute="trailing" id="36i-nk-aPj"/>
-                                    <constraint firstItem="Sng-hT-q5Y" firstAttribute="top" secondItem="xwf-8D-pFY" secondAttribute="bottom" constant="10" id="5rj-Rp-QZe"/>
-                                    <constraint firstItem="mW7-cS-Gs6" firstAttribute="leading" secondItem="fPM-O0-ao9" secondAttribute="leading" id="AgS-rp-IpP"/>
-                                    <constraint firstAttribute="trailing" secondItem="Sng-hT-q5Y" secondAttribute="trailing" id="Egf-NG-XJB"/>
-                                    <constraint firstItem="bBl-Vk-UpI" firstAttribute="top" secondItem="oWa-fS-QPq" secondAttribute="bottom" constant="10" id="GNW-x5-E5e"/>
-                                    <constraint firstItem="xwf-8D-pFY" firstAttribute="top" secondItem="Z2x-pi-kSq" secondAttribute="bottom" constant="10" id="Kps-pz-iP8"/>
-                                    <constraint firstItem="18x-xX-yRr" firstAttribute="top" secondItem="bBl-Vk-UpI" secondAttribute="bottom" constant="10" id="Zbb-lp-cIu"/>
-                                    <constraint firstItem="Z2x-pi-kSq" firstAttribute="leading" secondItem="fPM-O0-ao9" secondAttribute="leading" id="iOq-ud-ACg"/>
-                                    <constraint firstAttribute="trailing" secondItem="Z2x-pi-kSq" secondAttribute="trailing" id="lN0-kf-PsK"/>
-                                    <constraint firstItem="bBl-Vk-UpI" firstAttribute="leading" secondItem="fPM-O0-ao9" secondAttribute="leading" id="pOZ-vK-50x"/>
-                                    <constraint firstItem="oWa-fS-QPq" firstAttribute="top" secondItem="mW7-cS-Gs6" secondAttribute="bottom" constant="10" id="po3-xz-t3b"/>
-                                    <constraint firstAttribute="trailing" secondItem="mW7-cS-Gs6" secondAttribute="trailing" id="xan-H8-ZsE"/>
-                                    <constraint firstItem="Sng-hT-q5Y" firstAttribute="leading" secondItem="fPM-O0-ao9" secondAttribute="leading" id="zYz-zn-PI4"/>
+                                    <constraint firstAttribute="height" constant="115" id="eUl-ZR-9b8"/>
                                 </constraints>
+                                <edgeInsets key="layoutMargins" top="20" left="10" bottom="20" right="10"/>
                             </stackView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="753" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ohg-if-sCn">
-                                <rect key="frame" x="15.333333333333343" y="578" width="344.33333333333326" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" keyboardAppearance="alert" returnKeyType="go" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
-                                <connections>
-                                    <action selector="checkForNonConform" destination="BYZ-38-t0r" eventType="editingChanged" id="Ns9-17-89I"/>
-                                    <action selector="pressField:" destination="BYZ-38-t0r" eventType="touchDown" id="LyJ-Lv-mGX"/>
-                                    <action selector="returnKeyPressed" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="ZWg-ed-xQg"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FCL-yq-Ffk">
-                                <rect key="frame" x="20" y="551" width="335" height="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
-                            </textField>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="fPM-O0-ao9" secondAttribute="trailing" constant="15" id="74r-oZ-OV2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ohg-if-sCn" secondAttribute="bottom" constant="30" id="HFQ-AI-l3o"/>
-                            <constraint firstItem="FCL-yq-Ffk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="HGf-4o-oEE"/>
+                            <constraint firstItem="eVb-De-F3W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BA6-pY-JC8"/>
                             <constraint firstItem="fPM-O0-ao9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Ip2-VY-ALW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ohg-if-sCn" secondAttribute="trailing" constant="15.33" id="OcD-gM-Gs0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fPM-O0-ao9" secondAttribute="trailing" constant="15" id="W8K-9h-n7F"/>
+                            <constraint firstItem="eVb-De-F3W" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fPM-O0-ao9" secondAttribute="bottom" constant="15" id="Xks-Nb-oNH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eVb-De-F3W" secondAttribute="bottom" constant="5" id="d8G-Qw-GSz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fPM-O0-ao9" secondAttribute="trailing" constant="15" id="eSC-JK-fGL"/>
-                            <constraint firstItem="ohg-if-sCn" firstAttribute="top" secondItem="FCL-yq-Ffk" secondAttribute="bottom" constant="10" id="foQ-Rj-eKF"/>
-                            <constraint firstAttribute="trailing" secondItem="fPM-O0-ao9" secondAttribute="trailing" constant="15" id="h0h-f4-O1u">
+                            <constraint firstAttribute="trailing" secondItem="fPM-O0-ao9" secondAttribute="trailing" constant="10" id="h0h-f4-O1u">
                                 <variation key="heightClass=regular-widthClass=regular" constant="15"/>
                             </constraint>
                             <constraint firstItem="fPM-O0-ao9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jXN-Pn-RG8"/>
                             <constraint firstItem="fPM-O0-ao9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jXw-XT-KH2">
                                 <variation key="widthClass=compact" constant="15"/>
                             </constraint>
-                            <constraint firstItem="fPM-O0-ao9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="lEw-6f-tH9"/>
-                            <constraint firstItem="ohg-if-sCn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15.33" id="q33-Wd-Sx8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FCL-yq-Ffk" secondAttribute="trailing" constant="20" id="yL1-l9-zm4"/>
+                            <constraint firstItem="fPM-O0-ao9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="lEw-6f-tH9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eVb-De-F3W" secondAttribute="trailing" constant="10" id="p5o-hV-4YH"/>
+                            <constraint firstItem="eVb-De-F3W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="qq6-W6-ABl"/>
                             <constraint firstItem="fPM-O0-ao9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="yU3-Ip-rhL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -276,22 +330,22 @@
                     </view>
                     <navigationItem key="navigationItem" title="Enigma I" largeTitleDisplayMode="always" id="Avh-B8-61o">
                         <barButtonItem key="leftBarButtonItem" title="Help" id="GWl-nK-SHH">
-                            <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
-                                <action selector="didTapHeloButton:" destination="BYZ-38-t0r" id="r26-6N-hOM"/>
+                                <action selector="didTapHelpButton:" destination="BYZ-38-t0r" id="dKZ-U6-wtX"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="W8L-ik-pOf">
-                            <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <barButtonItem key="rightBarButtonItem" title=" " id="W8L-ik-pOf">
                             <connections>
                                 <action selector="resetView:" destination="BYZ-38-t0r" id="7Ut-oS-ZLI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="InputText" destination="ohg-if-sCn" id="VoL-nG-kuW"/>
                         <outlet property="NavigationBarHome" destination="Avh-B8-61o" id="1Gf-1r-Dvj"/>
-                        <outlet property="OutputText" destination="FCL-yq-Ffk" id="Ee3-Zu-C2Z"/>
+                        <outlet property="OutputTextView" destination="sHq-du-nD3" id="JjL-ea-cyB"/>
                         <outlet property="PlugboardInput" destination="Sng-hT-q5Y" id="HSY-0C-bYu"/>
                         <outlet property="Ring1" destination="O0e-mu-GhH" id="6vq-1w-09Z"/>
                         <outlet property="Ring2" destination="zIQ-rU-T9f" id="74O-Jc-sxH"/>
@@ -302,6 +356,13 @@
                         <outlet property="Scrambler2Place" destination="6X1-xf-FrV" id="eJD-wW-G4T"/>
                         <outlet property="Scrambler3" destination="2Zy-Oa-HF0" id="mfw-15-50N"/>
                         <outlet property="Scrambler3Place" destination="ngt-qz-5KA" id="JP2-iq-we6"/>
+                        <outlet property="helpButton" destination="GWl-nK-SHH" id="rQ1-09-XbN"/>
+                        <outlet property="inputOutputStackView" destination="eVb-De-F3W" id="tue-1E-MYd"/>
+                        <outlet property="plugboardStackView" destination="MJm-GY-iZe" id="GQw-84-a4x"/>
+                        <outlet property="refreshButton" destination="W8L-ik-pOf" id="7I0-Pe-KGK"/>
+                        <outlet property="ringStackView" destination="gAc-Pt-Uqt" id="u1N-8x-1OB"/>
+                        <outlet property="scramblersStackView" destination="hJj-hX-XWf" id="xlW-6E-st7"/>
+                        <outlet property="setScramblersStackView" destination="pFK-oI-5Yi" id="qfD-9r-PI9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -311,110 +372,103 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="786" y="131"/>
+            <point key="canvasLocation" x="784.79999999999995" y="130.78817733990149"/>
         </scene>
         <!--Info View-->
         <scene sceneID="Kqm-F1-g5f">
             <objects>
                 <viewController storyboardIdentifier="InfoView" modalPresentationStyle="overCurrentContext" id="lg8-xR-CMl" customClass="InfoView" customModule="EnigmaI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="Hnj-Jr-hik">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owR-3e-ST2">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="O9C-TP-leH">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRA-rI-W9I">
-                                            <rect key="frame" x="20" y="40" width="335" height="41"/>
+                                            <rect key="frame" x="20" y="40" width="374" height="41"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
-                                            <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJa-4I-wPg">
-                                            <rect key="frame" x="0.0" y="91" width="375" height="721"/>
+                                            <rect key="frame" x="0.0" y="91" width="414" height="805"/>
                                             <subviews>
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6n-dO-Mr5" userLabel="View1">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="606.33333333333337"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="610.66666666666663"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scramblers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ST-2R-KPR">
-                                                            <rect key="frame" x="20" y="10.000000000000002" width="335" height="28.666666666666671"/>
+                                                            <rect key="frame" x="20" y="10" width="374" height="29"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ScramblersInfoView" translatesAutoresizingMaskIntoConstraints="NO" id="Glt-vh-bHd">
-                                                            <rect key="frame" x="20" y="69" width="335" height="125"/>
+                                                            <rect key="frame" x="20" y="69.333333333333343" width="374" height="125"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="125" id="APf-Lc-pCc"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder 1 Page 1; Info View" lineBreakMode="tailTruncation" numberOfLines="23" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JaT-R3-5Ma">
-                                                            <rect key="frame" x="20" y="43.666666666666657" width="335" height="20.333333333333329"/>
+                                                            <rect key="frame" x="20" y="44" width="374" height="20.333333333333329"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ButtonsInfoView" translatesAutoresizingMaskIntoConstraints="NO" id="gT5-66-reB">
-                                                            <rect key="frame" x="20" y="253.33333333333331" width="335" height="100"/>
+                                                            <rect key="frame" x="20" y="253.66666666666669" width="374" height="100"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="100" id="kYo-vj-NQa"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder 2 Page 2; Info View" lineBreakMode="middleTruncation" numberOfLines="100" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3F-0y-DRi">
-                                                            <rect key="frame" x="20" y="228" width="335" height="20.333333333333343"/>
+                                                            <rect key="frame" x="20" y="228.33333333333331" width="374" height="20.333333333333343"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buttons" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ms-VD-khG">
-                                                            <rect key="frame" x="20" y="194" width="335" height="29"/>
+                                                            <rect key="frame" x="20" y="194.33333333333331" width="374" height="29"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b4Y-Ks-jj3">
-                                                            <rect key="frame" x="20" y="422.66666666666663" width="335" height="30"/>
-                                                            <nil key="textColor"/>
+                                                            <rect key="frame" x="20" y="423" width="374" height="34"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plugboard" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OjL-XE-bqv">
-                                                            <rect key="frame" x="20" y="358.33333333333331" width="335" height="29"/>
+                                                            <rect key="frame" x="20" y="358.66666666666669" width="374" height="29"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder 3 Page 1; Info View" lineBreakMode="middleTruncation" numberOfLines="100" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQo-SL-716">
-                                                            <rect key="frame" x="20" y="392.33333333333331" width="335" height="20.333333333333314"/>
+                                                            <rect key="frame" x="20" y="392.66666666666669" width="374" height="20.333333333333314"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder 4 Page 1; Info View" lineBreakMode="middleTruncation" numberOfLines="100" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvA-hu-uLh">
-                                                            <rect key="frame" x="20" y="501.66666666666663" width="335" height="20.333333333333371"/>
+                                                            <rect key="frame" x="20" y="505.99999999999994" width="374" height="20.333333333333314"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encryption" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hl6-Kx-I6X">
-                                                            <rect key="frame" x="20" y="467.66666666666663" width="335" height="29"/>
+                                                            <rect key="frame" x="20" y="472" width="374" height="29"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Decryption" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LdU-Yh-WDt">
-                                                            <rect key="frame" x="20" y="537" width="335" height="29"/>
+                                                            <rect key="frame" x="20" y="541.33333333333337" width="374" height="29"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder 5 Page 1; Info View" lineBreakMode="middleTruncation" numberOfLines="100" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBw-so-xlP">
-                                                            <rect key="frame" x="20" y="571" width="335" height="20.333333333333371"/>
+                                                            <rect key="frame" x="20" y="575.33333333333337" width="374" height="20.333333333333371"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -473,7 +527,7 @@
                                             </constraints>
                                         </scrollView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wk7-3r-nxp">
-                                            <rect key="frame" x="333" y="50" width="22" height="22"/>
+                                            <rect key="frame" x="372" y="50" width="22" height="22"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="22" id="9YV-0s-Fo0"/>
                                                 <constraint firstAttribute="height" constant="22" id="Cwu-1p-S5i"/>
@@ -498,7 +552,7 @@
                                         <constraint firstItem="xJa-4I-wPg" firstAttribute="leading" secondItem="O9C-TP-leH" secondAttribute="leading" id="wOb-Eo-syQ"/>
                                     </constraints>
                                 </view>
-                                <blurEffect style="dark"/>
+                                <blurEffect style="systemThinMaterial"/>
                             </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" red="0.22417422279792742" green="0.22417422279792742" blue="0.22417422279792742" alpha="0.35395576584507044" colorSpace="custom" customColorSpace="displayP3"/>
@@ -506,7 +560,6 @@
                             <constraint firstItem="owR-3e-ST2" firstAttribute="width" secondItem="Hnj-Jr-hik" secondAttribute="width" id="11v-oe-eCo"/>
                             <constraint firstItem="owR-3e-ST2" firstAttribute="centerX" secondItem="Hnj-Jr-hik" secondAttribute="centerX" id="Bus-14-JDD"/>
                             <constraint firstItem="owR-3e-ST2" firstAttribute="centerY" secondItem="Hnj-Jr-hik" secondAttribute="centerY" id="cO3-vo-FFU"/>
-                            <constraint firstItem="xJa-4I-wPg" firstAttribute="width" secondItem="Hnj-Jr-hik" secondAttribute="width" id="eph-O6-qlv"/>
                             <constraint firstItem="owR-3e-ST2" firstAttribute="height" secondItem="Hnj-Jr-hik" secondAttribute="height" id="zsE-8C-tgH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Mxb-lO-vgM"/>
@@ -529,18 +582,18 @@
             <objects>
                 <viewController modalPresentationStyle="overCurrentContext" id="yz1-pr-Q3x" customClass="PickerViewController" customModule="EnigmaI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fsF-2P-isN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i7L-Hl-QTY">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LkL-iy-7Wo">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <pickerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ugN-O9-RlZ">
-                                            <rect key="frame" x="0.0" y="576" width="375" height="216"/>
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <rect key="frame" x="0.0" y="660" width="414" height="216"/>
+                                            <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </pickerView>
                                     </subviews>
                                     <constraints>
@@ -549,7 +602,7 @@
                                         <constraint firstItem="ugN-O9-RlZ" firstAttribute="leading" secondItem="LkL-iy-7Wo" secondAttribute="leading" id="WjX-q8-WfU"/>
                                     </constraints>
                                 </view>
-                                <blurEffect style="dark"/>
+                                <blurEffect style="systemThinMaterial"/>
                             </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
@@ -563,6 +616,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="RzA-bx-fNX">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="Wel-Wh-ior">
+                            <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
                                 <action selector="didPressDone:" destination="yz1-pr-Q3x" id="8BE-EI-IFE"/>
                                 <segue destination="VzE-pY-79D" kind="unwind" unwindAction="cancelChildVCWithSegue:" id="LhD-c2-Ysj"/>
@@ -583,11 +637,18 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RK9-jQ-d8c" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="LOV-QK-uFJ">
-                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="LOV-QK-uFJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="barTintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -605,8 +666,8 @@
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="Fek-df-qUz">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Fek-df-qUz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -619,17 +680,16 @@
             <point key="canvasLocation" x="-244" y="899"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="7Ss-Yv-iLj"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="ButtonsInfoView" width="1408" height="350"/>
         <image name="CancelButtonInfoView" width="44" height="44"/>
-        <image name="Image" width="92.5" height="33"/>
         <image name="ScramblerIII_EnigmaApp" width="260.33334350585938" height="260.33334350585938"/>
         <image name="ScramblerII_EnigmaApp" width="260.33334350585938" height="260.33334350585938"/>
         <image name="ScramblerI_EnigmaApp" width="260.33334350585938" height="260.33334350585938"/>
         <image name="ScramblersInfoView" width="1657" height="532"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="fik-2H-umA"/>
-    </inferredMetricsTieBreakers>
-    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

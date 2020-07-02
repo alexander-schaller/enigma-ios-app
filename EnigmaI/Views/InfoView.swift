@@ -21,6 +21,8 @@ class InfoView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //TODO: Redo Info sheet with updated information and pictures
+        
         infolabel1page1.text = "With these you select the order of the Scramblers from left to right. You can also select which Scramblers are used in each position."
         
         infolabel2page1.text = "This stack of buttons lets you pick the settings of the individual Scramblers. First you select the visible letter (the one you can see through the little window), and in the second stack you select the ring position"

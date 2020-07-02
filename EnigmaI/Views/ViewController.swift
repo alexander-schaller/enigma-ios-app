@@ -17,74 +17,97 @@ struct global {
     
 }
 
-
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextViewDelegate {
 
     
     //IBOutlet Variables
     @IBOutlet weak var PlugboardInput: UITextField!
-    
     @IBOutlet weak var InputText: UITextField!
-    
     @IBOutlet weak var OutputText: UITextField!
+    @IBOutlet weak var OutputTextView: UITextView!
     
     @IBOutlet weak var Scrambler1Place: UIButton!
-    
     @IBOutlet weak var Scrambler2Place: UIButton!
-    
     @IBOutlet weak var Scrambler3Place: UIButton!
     
     @IBOutlet weak var NavigationBarHome: UINavigationItem!
-    
+    @IBOutlet weak var refreshButton: UIBarButtonItem!
+    @IBOutlet weak var helpButton: UIBarButtonItem!
+
     @IBOutlet weak var Scrambler1: UIButton!
-    
     @IBOutlet weak var Scrambler2: UIButton!
-    
     @IBOutlet weak var Scrambler3: UIButton!
     
     @IBOutlet weak var Ring1: UIButton!
-    
     @IBOutlet weak var Ring2: UIButton!
-    
     @IBOutlet weak var Ring3: UIButton!
     
+    @IBOutlet weak var scramblersStackView: UIStackView!
+    @IBOutlet weak var setScramblersStackView: UIStackView!
+    @IBOutlet weak var ringStackView: UIStackView!
+    @IBOutlet weak var plugboardStackView: UIStackView!
+    @IBOutlet weak var inputOutputStackView: UIStackView!
     
-    //Change Statusbar Style
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
+    //Custom Colors
+    var darkGrayBackgroundColor = UIColor(red: 229/255, green: 229/255, blue: 234/255, alpha: 1)
+    //var lightGrayBackgroundColor = UIColor(red: 199/255, green: 199/255, blue: 204/255, alpha: 1)
+    var lightGrayBackgroundColor = UIColor(red: 209/255, green: 209/255, blue: 214/255, alpha: 1)
+    var labelColor = UIColor.black
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        //Change Statusbar style
-        self.setNeedsStatusBarAppearanceUpdate()
+        if #available(iOS 13.0, *) {
+            darkGrayBackgroundColor = UIColor.secondarySystemBackground
+            lightGrayBackgroundColor = UIColor.secondarySystemFill
+            labelColor = UIColor.label
+        }
+        
+        
         
         //Set up of Plugboard Input Field
         PlugboardInput.autocapitalizationType = UITextAutocapitalizationType(rawValue: 3)!
-        
-        PlugboardInput.keyboardAppearance = UIKeyboardAppearance(rawValue: 1)!
-        
+        PlugboardInput.keyboardAppearance = UIKeyboardAppearance(rawValue: 0)!
         PlugboardInput.returnKeyType = UIReturnKeyType(rawValue: 9)!
-        
-        PlugboardInput.placeholder = "Plugboard"
-        
         PlugboardInput.autocorrectionType = UITextAutocorrectionType(rawValue: 1)!
+        PlugboardInput.addRoundedCornersAndBackground(backgroundColor: lightGrayBackgroundColor, cornerRadius: 10.0)
         
         //Set up of Input Text Field
-        
         InputText.autocapitalizationType = UITextAutocapitalizationType(rawValue: 3)!
-        
-        InputText.keyboardAppearance = UIKeyboardAppearance(rawValue: 1)!
-        
+        InputText.keyboardAppearance = UIKeyboardAppearance(rawValue: 0)!
         InputText.returnKeyType = UIReturnKeyType(rawValue: 1)!
-        
         InputText.placeholder = "Input"
+        InputText.attributedPlaceholder = NSAttributedString(string: "  Input", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        InputText.addRoundedCornersAndBackground(backgroundColor: lightGrayBackgroundColor, cornerRadius: 10.0)
         
-        OutputText.delegate = self
+        //Set up Output Text Field
+        OutputTextView.isEditable = false
+        OutputTextView.textContainerInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         
-        OutputText.inputView = UIView()
+        
+        //Set properties for the navigation bar buttons
+        refreshButton!.setBackgroundImage(UIImage(named: "Refresh Button"), for: .normal, barMetrics: .default)
+        refreshButton!.setBackgroundImage(UIImage(named: "Refresh Button Pressed"), for: .selected, barMetrics: .default)
+        
+        // Giving all the stackviews a background color with rounded corners through the extension
+        scramblersStackView.addBackground(color: darkGrayBackgroundColor, cornerRadius: 25.0)
+        setScramblersStackView.addBackground(color: darkGrayBackgroundColor, cornerRadius: 25.0)
+        ringStackView.addBackground(color: darkGrayBackgroundColor, cornerRadius: 25.0)
+        plugboardStackView.addBackground(color: darkGrayBackgroundColor, cornerRadius: 15)
+        inputOutputStackView.addBackground(color: darkGrayBackgroundColor, cornerRadius: 25.0)
+        
+        // Changing the background color and corner radius on all the buttons in the stacks
+        Scrambler1.formatToSpec(backgroundColor: lightGrayBackgroundColor, cornerRadius: 7)
+        Scrambler2.formatToSpec(backgroundColor: lightGrayBackgroundColor, cornerRadius: 7)
+        Scrambler3.formatToSpec(backgroundColor: lightGrayBackgroundColor, cornerRadius: 7)
+        
+        Ring1.formatToSpec(backgroundColor: lightGrayBackgroundColor, cornerRadius: 7)
+        Ring2.formatToSpec(backgroundColor: lightGrayBackgroundColor, cornerRadius: 7)
+        Ring3.formatToSpec(backgroundColor: lightGrayBackgroundColor, cornerRadius: 7)
+        
+
+        
         
     }
     override func didReceiveMemoryWarning() {
@@ -97,6 +120,16 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
+        if #available(iOS 13.0, *) {
+            labelColor = UIColor.label
+        }
+        
+        if UIScreen.main.bounds.height >= 600 {
+            navigationController?.navigationBar.prefersLargeTitles = true
+        } else {
+            navigationController?.navigationBar.prefersLargeTitles = false
+        }
+        
         // Retrieve the data from the global variables that get the data from the picker view
         let SL:[String] = [String(global.select[0] as! String), String(global.select[1] as! String), String(global.select[2] as! String)]
         let SP:[Character] = [Character(global.select[3] as! String), Character(global.select[4] as! String), Character(global.select[5] as! String)]
@@ -107,7 +140,7 @@ class ViewController: UIViewController {
         Scrambler2Place.setImage(UIImage(named: "Scrambler\(SL[1])_EnigmaApp"), for: UIControl.State(rawValue: 0))
         Scrambler3Place.setImage(UIImage(named: "Scrambler\(SL[2])_EnigmaApp"), for: UIControl.State(rawValue: 0))
         
-        let attributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        let attributes = [NSAttributedString.Key.foregroundColor: labelColor, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 17.0)]
         
         // Set the value for the scrambler button title based on the data from the picker
         Scrambler1.setAttributedTitle(NSAttributedString(string: "\(SP[0])", attributes: attributes), for: UIControl.State(rawValue: 0))
@@ -122,10 +155,8 @@ class ViewController: UIViewController {
         
     }
 
-
     //Swipe Down dismisses Keyboard
     @IBAction func swipe(_ sender: UISwipeGestureRecognizer) {
-        
         InputText.resignFirstResponder()
         PlugboardInput.resignFirstResponder()
         
@@ -134,7 +165,7 @@ class ViewController: UIViewController {
     
     //Add a Space after two characters have been entered
     @IBAction func addTrailingSpace() {
-        PlugboardInput.text! = AddTrailingSpace(of: PlugboardInput.text!.replacingOccurrences(of: " ", with: ""))
+        PlugboardInput.text! = EnigmaI.addTrailingSpace(of: PlugboardInput.text!.replacingOccurrences(of: " ", with: ""))
         
         let text:String? = PlugboardInput.text!.replacingOccurrences(of: " ", with: "")
         
@@ -171,14 +202,13 @@ class ViewController: UIViewController {
     
     //When return key is pressed run Enigma func
     @IBAction func returnKeyPressed() {
-        
-        let input = InputText.text!.replacingOccurrences(of: " ", with: "").uppercased()
+        let input = InputText.text!.uppercased()
         
         let SL:[String] = [String(global.select[0] as! String), String(global.select[1] as! String), String(global.select[2] as! String)]
         let SP:[Character] = [Character(global.select[3] as! String), Character(global.select[4] as! String), Character(global.select[5] as! String)]
         let RP:[Int] = [(global.select[6] as! NSString).integerValue , (global.select[7] as! NSString).integerValue, (global.select[8] as! NSString).integerValue]
         
-        OutputText.text = Enigma(input, PlugboardInput.text!, SL ,SP, RP)
+        OutputTextView.text = Enigma(input, PlugboardInput.text!, SL ,SP, RP)
         
         InputText.resignFirstResponder()
         
@@ -186,15 +216,13 @@ class ViewController: UIViewController {
     
     
     //Check whether the Characters are only letters
-
     @IBAction func checkForNonConform() {
-        
         let input = InputText.text!
         var temp:String = ""
         
         for i in input {
             
-            if ASCII[i] != nil || i == " " {
+            if i.isASCII || i == " " {
                 temp.append(i)
             }
             
@@ -203,108 +231,69 @@ class ViewController: UIViewController {
         
     }
     @IBAction func pressField(_ sender: Any) {
-        
         InputText.becomeFirstResponder()
-        
     }
     
     @IBAction func didPressDone(_ sender: Any) {
-        
         PlugboardInput.resignFirstResponder()
-        
     }
     
     @IBAction func didTapScrambler1(_ sender: Any) {
-        
         global.didTapWhat = 0
-        
     }
     @IBAction func didTapScrambler2(_ sender: Any) {
-        
         global.didTapWhat = 1
-        
     }
     
     @IBAction func didTapScrambler3(_ sender: Any) {
-        
         global.didTapWhat = 2
-        
     }
     
     @IBAction func didTapScramblerSet1(_ sender: Any) {
-        
         global.didTapWhat = 3
-        
     }
     
     @IBAction func didTapScramblerSet2(_ sender: Any) {
-        
         global.didTapWhat = 4
-        
     }
     
     @IBAction func didTapScramblerSet3(_ sender: Any) {
-        
         global.didTapWhat = 5
-        
     }
     
     @IBAction func didTapRing1(_ sender: Any) {
-        
         global.didTapWhat = 6
-        
     }
     
     @IBAction func didTapRing2(_ sender: Any) {
-        
         global.didTapWhat = 7
-        
     }
     
     @IBAction func didTapRing3(_ sender: Any) {
-        
         global.didTapWhat = 8
-        
     }
     
     @IBAction func resetView(_ sender: Any) {
-        
         global.select = ["I", "II", "III", "A", "B", "C", "1" , "1", "1"]
         PlugboardInput.text = ""
         InputText.text = ""
-        OutputText.text = ""
+        OutputTextView.text = ""
         
         viewWillAppear(false)
-        
-        
     }
     
 
-    @IBAction func didTapHeloButton(_ sender: Any) {
-    
+    @IBAction func didTapHelpButton(_ sender: Any) {
         let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         
         let resultViewController = storyboard.instantiateViewController(withIdentifier: "InfoView") as! InfoView
         
         self.present(resultViewController, animated:true, completion:nil)
-        
-        
     }
     
     @IBAction func cancelChildVC(segue:UIStoryboardSegue) {
         viewWillAppear(false)
         self.dismiss(animated: true, completion: nil)
-    }
-    
-}
-
-
-extension ViewController: UITextFieldDelegate {
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        return textField != self.OutputText
-        
     }
     
 }
